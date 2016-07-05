@@ -3,7 +3,7 @@ import tkMessageBox
 
 class Application(Frame):
     def createOrder(self):
-        lines = self.Input.get("1.0", END)
+        lines = self.Input.get("1.0", "end-1c")
         lines = lines.encode("utf-8").split("\n")
         print lines
         
@@ -93,6 +93,9 @@ class Application(Frame):
         # return order
         tkMessageBox.showinfo("Information", order)
 
+    def clear_text(self):
+        self.Input.delete('1.0', END)
+
 
     def createWidgets(self):
         """
@@ -108,6 +111,10 @@ class Application(Frame):
         self.Input.pack()
         self.runButton = Button(self, text = "Run", command = self.createOrder)
         self.runButton.pack()
+
+        self.clearButton = Button(self, text = "Clear All", command = self.clear_text)
+        self.clearButton.pack()
+
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
