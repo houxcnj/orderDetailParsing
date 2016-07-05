@@ -86,16 +86,31 @@ class Application(Frame):
             except IndexError:
                 pass
 
+        message = "Order ID: " + order['orderID'] + "\n"
+        message += "Name: " + order['name'] + "\n"
+        message += "Address 1:" + order['address1'] +"\n"
+        message += "Address 2:" + order['address2'] + "\n"
+        message += "City: " + order['city'] + "\n"
+        message += "State:" + order['state'] + "\n"
+        message += "Zip Code1: " + order['zipcode1'] + "\n"
+        message += "Zip Code2: " + order['zipcode2'] + "\n"
+        message += "Prduct: " + order['product'] + "\n"
+        message += "SKU: " + order['sku'] + "\n"
+        message += "ASIN: " + order['asin'] + "\n"
+        message += "Purchase Date: " + order['purchase_date'] + "\n"
+        message += "Refund: " + str(order['refund']) 
 
         for k, v in order.items():
             print k, ": ", v
+            # message +=  k + ": " + str(v) + "\n"
+
 
         # return order
-        tkMessageBox.showinfo("Information", order)
+        self.Output.insert(END, message)
 
     def clear_text(self):
         self.Input.delete('1.0', END)
-
+        self.Output.delete('1.0', END)
 
     def createWidgets(self):
         """
@@ -108,12 +123,19 @@ class Application(Frame):
         """
 
         self.Input = Text(self, height=50, width=60)
-        self.Input.pack()
+        self.Input.pack(side = LEFT)
+        
+        self.Output = Text(self, height=50, width=60)
+        self.Output.pack(side = RIGHT)
+
         self.runButton = Button(self, text = "Run", command = self.createOrder)
-        self.runButton.pack()
+        self.runButton.pack(side = BOTTOM)
 
         self.clearButton = Button(self, text = "Clear All", command = self.clear_text)
-        self.clearButton.pack()
+        self.clearButton.pack(side = BOTTOM)
+
+        self.quitButton = Button(self, text ="Quit", command = self.quit)
+        self.quitButton.pack(side = BOTTOM)
 
 
     def __init__(self, master=None):
