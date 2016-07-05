@@ -1,0 +1,53 @@
+{
+  "address1": "420 ANZA DR", 
+  "address2": "", 
+  "asin": " B00MJ8FNOE", 
+  "city": "SONOMA", 
+  "name": "Stacey Giometti", 
+  "product": "6 LG HE2 18650 2500mAh 35A 3.7v Rechargeable Flat Top Batteries", 
+  "purchaseDate": "Mon, Jun 20, 2016 8:21 PM PT", 
+  "refund": "Flase", 
+  "sku": " LG-HE2-BATT-04-6PK-F_BATTERY", 
+  "state": "CA", 
+  "zipcode1": "95476", 
+  "zipcode2": "3701"
+}{
+  "address1": "687 PAWNEE BLUFF RD", 
+  "address2": "BOX 153", 
+  "asin": " B00MJ8FFD8", 
+  "city": "FORT RILEY", 
+  "name": "Glen Parker Jr.", 
+  "product": "4 LG HE2 18650 2500mAh 35A 3.7v Rechargeable Flat Top Batteries", 
+  "purchaseDate": "Sat, Jun 4, 2016 11:15 AM PT", 
+  "refund": "Flase", 
+  "sku": " LG-HE2-BATT-03-4PK-F_BATTERY", 
+  "state": "KS", 
+  "zipcode1": "66442", 
+  "zipcode2": "4472"
+}{
+  "address1": "25760 Silver Canyon Court", 
+  "address2": "", 
+  "asin": " B00XV446UW", 
+  "city": "Castro Valley", 
+  "name": "Timothy Richardson", 
+  "product": "iPhone 6S/6 Plus Battery Case [Ultra Thin] - UNU DX-6 Plus iPhone 6/6S Plus Battery Case 5.5 inch [White / Silver] - MFI Apple Certified 4100mAh Exter", 
+  "purchaseDate": "Mon, Jun 6, 2016 1:00 PM PT", 
+  "refund": "True", 
+  "sku": " DXF-06P-WSL-F_IPHONE-6-PLUS-BATTERY", 
+  "state": "CA", 
+  "zipcode1": "94552", 
+  "zipcode2": ""
+}{
+  "address1": "420 ANZA DR", 
+  "address2": "", 
+  "asin": " B00MJ8FNOE", 
+  "city": "SONOMA", 
+  "name": "Stacey Giometti", 
+  "product": "6 LG HE2 18650 2500mAh 35A 3.7v Rechargeable Flat Top Batteries", 
+  "purchaseDate": "Mon, Jun 20, 2016 8:21 PM PT", 
+  "refund": "Flase", 
+  "sku": " LG-HE2-BATT-04-6PK-F_BATTERY", 
+  "state": "CA", 
+  "zipcode1": "95476", 
+  "zipcode2": "3701"
+}
