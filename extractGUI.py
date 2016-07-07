@@ -20,7 +20,7 @@ class Application(Frame):
         order['sku'] = ""
         order['asin'] = ""
         order['purchase_date'] = ""
-        order['refund'] = False
+        order['refund'] = ""
 
 
         for index, line in enumerate(lines):
@@ -67,7 +67,8 @@ class Application(Frame):
 
 
                 elif line.startswith( 'Refund total'):
-                    order['refund'] = True
+                    refundAmount = line.split("\t")
+                    order['refund'] = refundAmount[-1]
                     #print "refund: ", order['refund']
 
 
@@ -107,7 +108,7 @@ class Application(Frame):
             message += "SKU: " + order['sku'] + "\n"
             message += "ASIN: " + order['asin'] + "\n"
             message += "Purchase Date: " + order['purchase_date'] + "\n"
-            message += "Refund: " + str(order['refund']) 
+            message += "Refund: " + order['refund']
             self.Output.insert(END, message)
         else:
             tkMessageBox.showinfo("Sorry", "Illegal Input, Please input again.")
