@@ -41,6 +41,9 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JScrollPane;
+import javax.swing.DropMode;
+import javax.swing.ScrollPaneConstants;
+ 
 
 public class OrderTool extends JFrame {
 
@@ -58,7 +61,7 @@ public class OrderTool extends JFrame {
 	private JTextField zip1Field;
 	private JTextField zip2Field;
 	private JTextField phoneField;
-	private JTextField textField_11;
+	private JTextField replaceStdField;
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JTextField productField;
@@ -123,11 +126,13 @@ public class OrderTool extends JFrame {
 		inputText = new JTextArea();
 		scrollPane_1.setViewportView(inputText);
 		
+		// create process button and add the process action
 		JButton btnProcess = new JButton("Process");
 		//btnNewButton.setAction(action);
 		
 		btnProcess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// get input from inputText and write it to test.txt file.
 				try {
 						BufferedWriter out = new BufferedWriter(new FileWriter("test.txt"));
 						inputText.write(out);
@@ -137,6 +142,7 @@ public class OrderTool extends JFrame {
 					{
 							System.out.println(e1);
 					}
+				// execute the python file. The python file need test.txt as input and will output a data.json file
 				try {
 					String path = "C:/Users/unu/Downloads/intern/";	
 					ProcessBuilder pb = new ProcessBuilder ("python", path + "extract4.py");
@@ -146,6 +152,7 @@ public class OrderTool extends JFrame {
 					
 					String ret = in.readLine();
 					
+					// tell if the input is legal based on python output stream.
 					while (ret != null){
 						if (ret.equals("Sorry, please input again!")) {
 							JOptionPane.showMessageDialog(null, "Illegal input text, please try it again!");
@@ -157,10 +164,11 @@ public class OrderTool extends JFrame {
 						ret = in.readLine();}
 					}
 					
-					
+					// read .json file and parse it.
 					FileReader reader = new FileReader("data.json");
 					JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
 					
+					// get value from each key in json file. 
 					orderID = (String) jsonData.get("orderID");
 					fullName = (String) jsonData.get("name");
 					address1 = (String) jsonData.get("address1");
@@ -176,6 +184,7 @@ public class OrderTool extends JFrame {
 					product = (String) jsonData.get("product");
 					phone = (String) jsonData.get("phone");
 					
+					// fill value to the appropriate field 
 					orderField.setText(orderID);
 					skuField.setText(sku);
 					asinField.setText(asin);;
@@ -190,6 +199,7 @@ public class OrderTool extends JFrame {
 					refundField.setText(refund);
 					dateField.setText(purchaseDate);
 					phoneField.setText(phone);
+					// set the font color based on refund total
 					if (refund.equals("$0.00"))
 						refundField.setForeground(Color.GREEN);
 					else
@@ -206,14 +216,16 @@ public class OrderTool extends JFrame {
 		btnProcess.setBounds(47, 674, 89, 23);
 		contentPane.add(btnProcess);
 		
+		// create clear button and its action.
 		JButton btnClear = new JButton("Clear");
 		btnClear.setAction(action_1);
-		btnClear.setBounds(168, 674, 89, 23);
+		btnClear.setBounds(326, 674, 89, 23);
 		contentPane.add(btnClear);
 		
+		// create exit button and its action.
 		JButton btnExit = new JButton("Exit");
 		btnExit.setAction(action_2);
-		btnExit.setBounds(297, 674, 89, 23);
+		btnExit.setBounds(466, 674, 89, 23);
 		contentPane.add(btnExit);
 		
 		JLabel lblInputWindow = new JLabel("Input Window");
@@ -272,6 +284,7 @@ public class OrderTool extends JFrame {
 		lblPhone.setBounds(452, 430, 74, 14);
 		contentPane.add(lblPhone);
 		
+		// field action: double click and select all and copied to clipboard
 		orderField = new JTextField();
 		orderField.addMouseListener(new MouseAdapter() {
 			@Override
@@ -478,11 +491,24 @@ public class OrderTool extends JFrame {
 		lblReplacementStdData.setBounds(789, 69, 172, 14);
 		contentPane.add(lblReplacementStdData);
 		
-		textField_11 = new JTextField();
-		textField_11.setEditable(false);
-		textField_11.setBounds(789, 91, 145, 20);
-		contentPane.add(textField_11);
-		textField_11.setColumns(10);
+		replaceStdField = new JTextField();
+		replaceStdField.setEditable(false);
+		replaceStdField.setBounds(789, 91, 145, 20);
+		contentPane.add(replaceStdField);
+		replaceStdField.setColumns(10);
+		replaceStdField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					replaceStdField.selectAll();
+					String sltext = replaceStdField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Raw Date has been copied to clipboard.\n");
+				}
+			}
+		});
 		
 		JLabel lblReplacementFastData = new JLabel("Replacement Fast Data Row");
 		lblReplacementFastData.setBounds(789, 143, 172, 14);
@@ -575,10 +601,16 @@ public class OrderTool extends JFrame {
 		scrollPane.setBounds(447, 573, 487, 90);
 		contentPane.add(scrollPane);
 		
+		// log area, show the mouse action info 
 		logArea = new JTextArea();
 		scrollPane.setViewportView(logArea);
 		logArea.setForeground(Color.BLUE);
 		logArea.setEditable(false);
+		
+		JButton btnExport = new JButton("Export");
+		btnExport.setBounds(187, 674, 89, 23);
+		contentPane.add(btnExport);
+		btnExport.setAction(action_3);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -590,10 +622,11 @@ public class OrderTool extends JFrame {
 			 
 		}
 	}
+	// clear action
 	private class SwingAction_1 extends AbstractAction {
 		public SwingAction_1() {
 			putValue(NAME, "Clear");
-			putValue(SHORT_DESCRIPTION, "Some short description");
+			putValue(SHORT_DESCRIPTION, "Clear all text");
 		}
 		public void actionPerformed(ActionEvent e) {
 			orderField.setText("");
@@ -614,6 +647,7 @@ public class OrderTool extends JFrame {
 			inputText.setText("");
 		}
 	}
+	//exit action
 	private class SwingAction_2 extends AbstractAction {
 		public SwingAction_2() {
 			putValue(NAME, "Exit");
@@ -625,10 +659,13 @@ public class OrderTool extends JFrame {
 	}
 	private class SwingAction_3 extends AbstractAction {
 		public SwingAction_3() {
-			putValue(NAME, "SwingAction_3");
-			putValue(SHORT_DESCRIPTION, "Some short description");
+			putValue(NAME, "Export");
+			putValue(SHORT_DESCRIPTION, "Export data to row");
 		}
 		public void actionPerformed(ActionEvent e) {
+			String outRow = "\t" + orderID + "\t\t\t\t" + sku + "\t\t\t" + fullName +"\t\t" + address1 + "\t" + address2 + "\t" + city + "\t" + state +"\t" + zipcode1 + "\tUS\t\t" + phone;
+			replaceStdField.setText(outRow);
+			
 		}
 	}
 }
