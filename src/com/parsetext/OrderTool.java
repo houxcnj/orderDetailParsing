@@ -31,12 +31,18 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.zendesk.client.v2.Zendesk;
+import org.zendesk.client.v2.model.Comment;
+import org.zendesk.client.v2.model.CustomFieldValue;
+import org.zendesk.client.v2.model.Ticket;
+
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -85,6 +91,9 @@ public class OrderTool extends JFrame {
 	private String phone;
 	private JTextField dateField;
 	private final Action action_3 = new SwingAction_3();
+	private JTextField ticketNField;
+	private Ticket ticket_bak;
+	private final Action action_4 = new SwingAction_4();
 
 	/**
 	 * Launch the application.
@@ -611,14 +620,102 @@ public class OrderTool extends JFrame {
 		btnExport.setBounds(187, 674, 89, 23);
 		contentPane.add(btnExport);
 		btnExport.setAction(action_3);
+		
+		JLabel lblZendeskTicket = new JLabel("ZenDesk ticket #");
+		lblZendeskTicket.setBounds(789, 302, 145, 14);
+		contentPane.add(lblZendeskTicket);
+		
+		ticketNField = new JTextField();
+		ticketNField.setColumns(10);
+		ticketNField.setBounds(789, 324, 145, 20);
+		contentPane.add(ticketNField);
+		
+		JButton btnPopulate = new JButton("Populate");
+		btnPopulate.setAction(action);
+		btnPopulate.setBounds(789, 355, 74, 23);
+		contentPane.add(btnPopulate);
+		
+		JButton btnRestore = new JButton("Restore");
+		btnRestore.setAction(action_4);
+		btnRestore.setBounds(873, 355, 74, 23);
+		contentPane.add(btnRestore);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
-			putValue(NAME, "Process");
-			putValue(SHORT_DESCRIPTION, "Process Data");
+			putValue(NAME, "Populate");
+			putValue(SHORT_DESCRIPTION, "Populate data to zendesk");
 		}
 		public void actionPerformed(ActionEvent e) {
+			String str = ticketNField.getText();
+			int ticketID = Integer.parseInt(str);
+			try {
+				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
+						.setUsername("zendesk@myunu.com")
+				        .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
+				        .build();
+				Ticket ticket = zd.getTicket((long) ticketID);
+				ticket_bak = ticket;
+				/*
+				ArrayList<CustomFieldValue> custom_fields = new ArrayList<CustomFieldValue>();
+				
+				CustomFieldValue c1 = new CustomFieldValue((long)23988203, fullName);
+				CustomFieldValue c2 = new CustomFieldValue((long)24037856, address1);
+				CustomFieldValue c3 = new CustomFieldValue((long)24037866, address2);
+				CustomFieldValue c4 = new CustomFieldValue((long)24037876, city);
+				CustomFieldValue c5 = new CustomFieldValue((long)23998853, state);
+				CustomFieldValue c6 = new CustomFieldValue((long)23998863, zipcode1);
+				CustomFieldValue c7 = new CustomFieldValue((long)24037886, "US");
+				CustomFieldValue c8 = new CustomFieldValue((long)23998873, phone);
+				CustomFieldValue c9 = new CustomFieldValue((long)23988223, purchaseDate);
+				//CustomFieldValue c10 = new CustomFieldValue((long)24058526, product);
 			
+				custom_fields.add(c1);
+				custom_fields.add(c2);
+				custom_fields.add(c3);
+				custom_fields.add(c4);
+				custom_fields.add(c5);
+				custom_fields.add(c6);
+				custom_fields.add(c7);
+				custom_fields.add(c8);
+				custom_fields.add(c9);
+				//custom_fields.add(c10);
+				ticket.setCustomFields(custom_fields);
+				*/
+				
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next().setValue(fullName);
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next().setValue(address1);
+				ticket.getCustomFields().iterator().next().setValue(address2);
+				ticket.getCustomFields().iterator().next().setValue(city);
+				ticket.getCustomFields().iterator().next().setValue(state);
+				ticket.getCustomFields().iterator().next().setValue(zipcode1);
+				ticket.getCustomFields().iterator().next().setValue("US");
+				ticket.getCustomFields().iterator().next().setValue(phone);
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next().setValue(purchaseDate);
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				ticket.getCustomFields().iterator().next();
+				
+				//ticket.getCustomFields().iterator().next().setValue(product);
+				
+				zd.updateTicket(ticket);
+				zd.close();
+			}
+			catch (Exception err)
+			{
+				System.out.println(err);
+			}
 			 
 		}
 	}
@@ -666,6 +763,28 @@ public class OrderTool extends JFrame {
 			String outRow = "\t" + orderID + "\t\t\t\t" + sku + "\t\t\t" + fullName +"\t\t" + address1 + "\t" + address2 + "\t" + city + "\t" + state +"\t" + zipcode1 + "\tUS\t\t" + phone;
 			replaceStdField.setText(outRow);
 			
+		}
+	}
+	private class SwingAction_4 extends AbstractAction {
+		public SwingAction_4() {
+			putValue(NAME, "Restore");
+			putValue(SHORT_DESCRIPTION, "Restore ticket to previous status");
+		}
+		public void actionPerformed(ActionEvent e) {
+			try {
+				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
+						.setUsername("zendesk@myunu.com")
+				        .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
+				        .build();
+				if (ticket_bak.equals(null))
+					System.out.println("Sorry, no previous data.");
+				else
+					zd.updateTicket(ticket_bak);
+				zd.close();
+			}
+			catch (Exception err) {
+				System.out.println(err);
+			}
 		}
 	}
 }
