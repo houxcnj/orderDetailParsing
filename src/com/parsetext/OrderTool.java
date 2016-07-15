@@ -93,6 +93,7 @@ public class OrderTool extends JFrame {
 	private final Action action_3 = new SwingAction_3();
 	private JTextField ticketNField;
 	private Ticket ticket_bak;
+	private Ticket ticket;
 	private final Action action_4 = new SwingAction_4();
 
 	/**
@@ -632,12 +633,12 @@ public class OrderTool extends JFrame {
 		
 		JButton btnPopulate = new JButton("Populate");
 		btnPopulate.setAction(action);
-		btnPopulate.setBounds(789, 355, 74, 23);
+		btnPopulate.setBounds(768, 355, 89, 23);
 		contentPane.add(btnPopulate);
 		
 		JButton btnRestore = new JButton("Restore");
 		btnRestore.setAction(action_4);
-		btnRestore.setBounds(873, 355, 74, 23);
+		btnRestore.setBounds(867, 355, 90, 23);
 		contentPane.add(btnRestore);
 	}
 	private class SwingAction extends AbstractAction {
@@ -650,12 +651,14 @@ public class OrderTool extends JFrame {
 			int ticketID = Integer.parseInt(str);
 			try {
 				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
-						.setUsername("zendesk@myunu.com")
+						.setUsername("zendesk@myunu.com")//.setPassword("")
 				        .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
 				        .build();
-				Ticket ticket = zd.getTicket((long) ticketID);
-				ticket_bak = ticket;
-				/*
+				ticket_bak = new Ticket();
+				ticket_bak = zd.getTicket((long) ticketID);
+				ticket = new Ticket();
+				ticket = zd.getTicket((long) ticketID);
+				
 				ArrayList<CustomFieldValue> custom_fields = new ArrayList<CustomFieldValue>();
 				
 				CustomFieldValue c1 = new CustomFieldValue((long)23988203, fullName);
@@ -667,6 +670,7 @@ public class OrderTool extends JFrame {
 				CustomFieldValue c7 = new CustomFieldValue((long)24037886, "US");
 				CustomFieldValue c8 = new CustomFieldValue((long)23998873, phone);
 				CustomFieldValue c9 = new CustomFieldValue((long)23988223, purchaseDate);
+				//CustomFieldValue c10 = new CustomFieldValue((long)23988233, orderID);
 				//CustomFieldValue c10 = new CustomFieldValue((long)24058526, product);
 			
 				custom_fields.add(c1);
@@ -680,34 +684,6 @@ public class OrderTool extends JFrame {
 				custom_fields.add(c9);
 				//custom_fields.add(c10);
 				ticket.setCustomFields(custom_fields);
-				*/
-				
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next().setValue(fullName);
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next().setValue(address1);
-				ticket.getCustomFields().iterator().next().setValue(address2);
-				ticket.getCustomFields().iterator().next().setValue(city);
-				ticket.getCustomFields().iterator().next().setValue(state);
-				ticket.getCustomFields().iterator().next().setValue(zipcode1);
-				ticket.getCustomFields().iterator().next().setValue("US");
-				ticket.getCustomFields().iterator().next().setValue(phone);
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next().setValue(purchaseDate);
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				ticket.getCustomFields().iterator().next();
-				
-				//ticket.getCustomFields().iterator().next().setValue(product);
 				
 				zd.updateTicket(ticket);
 				zd.close();
@@ -772,14 +748,19 @@ public class OrderTool extends JFrame {
 		}
 		public void actionPerformed(ActionEvent e) {
 			try {
+				
 				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
 						.setUsername("zendesk@myunu.com")
 				        .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
 				        .build();
+				/*
 				if (ticket_bak.equals(null))
 					System.out.println("Sorry, no previous data.");
 				else
 					zd.updateTicket(ticket_bak);
+				*/
+				System.out.println(ticket_bak.getCustomFields().get(0).getValue());
+				zd.updateTicket(ticket_bak);
 				zd.close();
 			}
 			catch (Exception err) {

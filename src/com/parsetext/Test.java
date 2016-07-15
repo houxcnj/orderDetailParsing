@@ -33,17 +33,30 @@ public class Test {
 			ArrayList<CustomFieldValue> custom_fields = new ArrayList<CustomFieldValue>();
 			
 			
-			CustomFieldValue cc = new CustomFieldValue((long)24024776, "gogogogo");
-			CustomFieldValue cc1 = new CustomFieldValue((long)23988203, "Xiaocheng Hou");
+			//CustomFieldValue cc = new CustomFieldValue((long)24024776, "gogogogo");
+			/*
+			CustomFieldValue c1 = new CustomFieldValue((long)23988203, "Great Great");
+			CustomFieldValue c2 = new CustomFieldValue((long)24037856, "541 W 31st St");
+			CustomFieldValue c3 = new CustomFieldValue((long)24037866, "2F");
+			CustomFieldValue c4 = new CustomFieldValue((long)24037876, "Chicago");
+			CustomFieldValue c5 = new CustomFieldValue((long)23998853, "IL");
+			CustomFieldValue c6 = new CustomFieldValue((long)23998863, "60616");
+			CustomFieldValue c7 = new CustomFieldValue((long)24037886, "US");
+			CustomFieldValue c8 = new CustomFieldValue((long)23998873, "3128061158");
 			
-			custom_fields.add(cc);
-			custom_fields.add(cc1);
+			custom_fields.add(c1);
+			custom_fields.add(c2);
+			custom_fields.add(c3);
+			custom_fields.add(c4);
+			custom_fields.add(c5);
+			custom_fields.add(c6);
+			custom_fields.add(c7);
+			custom_fields.add(c8);
 			ticket.setCustomFields(custom_fields);
+			*/
 			
+			ticket.getCustomFields().get(1).setValue("Xiaocheng Hou");
 			zd.updateTicket(ticket);
-			
-			
-			
 			zd.close();
 		}
 		catch (Exception e)
