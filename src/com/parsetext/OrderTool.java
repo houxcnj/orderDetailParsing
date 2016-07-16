@@ -95,6 +95,8 @@ public class OrderTool extends JFrame {
 	private Ticket ticket_bak;
 	private Ticket ticket;
 	private final Action action_4 = new SwingAction_4();
+	private String loginID;
+	private String passwd;
 
 	/**
 	 * Launch the application.
@@ -651,8 +653,8 @@ public class OrderTool extends JFrame {
 			int ticketID = Integer.parseInt(str);
 			try {
 				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
-						.setUsername("zendesk@myunu.com")//.setPassword("")
-				        .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
+						.setUsername(loginID).setPassword(passwd)
+				        // .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
 				        .build();
 				ticket_bak = new Ticket();
 				ticket_bak = zd.getTicket((long) ticketID);
@@ -691,6 +693,7 @@ public class OrderTool extends JFrame {
 			catch (Exception err)
 			{
 				System.out.println(err);
+				err.getMessage();
 			}
 			 
 		}
@@ -767,5 +770,11 @@ public class OrderTool extends JFrame {
 				System.out.println(err);
 			}
 		}
+	}
+	public void setLoginID (String str) {
+		loginID = str;
+	}
+	public void setPassword (String pass) {
+		passwd = pass;
 	}
 }

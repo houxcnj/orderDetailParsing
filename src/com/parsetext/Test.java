@@ -55,13 +55,14 @@ public class Test {
 			ticket.setCustomFields(custom_fields);
 			*/
 			
-			ticket.getCustomFields().get(1).setValue("Xiaocheng Hou");
-			zd.updateTicket(ticket);
+			System.out.println(ticket.getId());
+			// zd.updateTicket(ticket);
 			zd.close();
 		}
 		catch (Exception e)
 		{
-			System.out.println(e);
+			System.err.println(e);
+			System.out.println("Please check your id and passward!");
 		}
 
 	}
