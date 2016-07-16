@@ -25,6 +25,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextPane;
 import javax.swing.JScrollPane;
 import java.awt.Color;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
 public class Login extends JFrame {
 
@@ -35,7 +37,7 @@ public class Login extends JFrame {
 	private final Action action_1 = new SwingAction_1();
 	private String loginID;
 	private String passwd;
-	private JTextPane txtpnInfo;
+	private JTextArea txtpnInfo;
 
 	/**
 	 * Launch the application.
@@ -104,10 +106,11 @@ public class Login extends JFrame {
 		contentPane.add(btnExit);
 		
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setBounds(74, 212, 286, 38);
 		contentPane.add(scrollPane);
 		
-		txtpnInfo = new JTextPane();
+		txtpnInfo = new JTextArea();
 		txtpnInfo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtpnInfo.setForeground(Color.BLUE);
 		scrollPane.setViewportView(txtpnInfo);
@@ -128,14 +131,15 @@ public class Login extends JFrame {
 				        .build();
 				zd.getTickets().iterator().hasNext();
 				zd.close();
-				txtpnInfo.setText("Login successful");
+				txtpnInfo.append("\nLogin successful");
 				OrderTool tool = new OrderTool();
 				tool.setVisible(true);
 				tool.setLoginID(loginID);
 				tool.setPassword(passwd);
 				dispose();
 			} catch (Exception e1) {
-				txtpnInfo.setText(e1.getMessage() + ": Please check your ID and Password!");
+				System.out.println(e1.getMessage());
+				txtpnInfo.append("\nPlease check your ID and Password!");
 				
 			}
 			
