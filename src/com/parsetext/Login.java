@@ -20,6 +20,8 @@ import java.awt.GridBagConstraints;
 import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -62,7 +64,9 @@ public class Login extends JFrame {
 					frame.setVisible(true);
 					}
 					else {
-						
+						Confirm cf = new Confirm();
+						cf.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+						cf.setVisible(true);
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -127,7 +131,7 @@ public class Login extends JFrame {
 		contentPane.add(scrollPane);
 		
 		txtpnInfo = new JTextArea();
-		txtpnInfo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtpnInfo.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		txtpnInfo.setForeground(Color.BLUE);
 		scrollPane.setViewportView(txtpnInfo);
 		txtpnInfo.setEditable(false);
@@ -170,10 +174,10 @@ public class Login extends JFrame {
 			System.exit(0);
 		}
 	}
-	public static boolean isThisComputer() {
+	private static boolean isThisComputer() {
 		String sha1 = "";
 		try {
-		FileReader reader = new FileReader("sha1.txt");
+		FileReader reader = new FileReader("sha1");
 		BufferedReader in = new BufferedReader(reader);
 		sha1 = in.readLine();
 		}
@@ -186,7 +190,7 @@ public class Login extends JFrame {
 			return false;
 	}
 	
-	public static String thisComputer() {
+	private static String thisComputer() {
 		String sha1 = "";
 		InetAddress ip;
 		String originalsha1 = "";

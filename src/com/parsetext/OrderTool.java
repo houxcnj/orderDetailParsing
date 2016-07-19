@@ -103,6 +103,7 @@ public class OrderTool extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	/*
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -115,7 +116,7 @@ public class OrderTool extends JFrame {
 			}
 		});
 	}
-
+	*/
 	/**
 	 * Create the frame.
 	 */
@@ -699,11 +700,14 @@ public class OrderTool extends JFrame {
 				
 				zd.updateTicket(ticket);
 				zd.close();
+				String mm = ": ticket " + Integer.toString(ticketID) + "has been updated.\n";
+				logArea.insert(dt.toString() + mm, 0);
 			}
 			catch (Exception err)
 			{
 				System.out.println(err);
 				err.getMessage();
+				logArea.insert(dt.toString() + "Information can't be update to the ticket, please double check!", 0);
 			}
 			}
 		}

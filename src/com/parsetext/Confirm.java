@@ -19,6 +19,7 @@ public class Confirm extends JDialog {
 	/**
 	 * Launch the application.
 	 */
+	/*
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -32,7 +33,7 @@ public class Confirm extends JDialog {
 			}
 		});
 	}
-
+	*/
 	/**
 	 * Create the dialog.
 	 */
@@ -78,7 +79,10 @@ public class Confirm extends JDialog {
 			putValue(SHORT_DESCRIPTION, "Ask supervisor to unlock the software!");
 		}
 		public void actionPerformed(ActionEvent e) {
-			
+			Unlock sv = new Unlock();
+			sv.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			sv.setVisible(true);
+			dispose();
 		}
 	}
 }
