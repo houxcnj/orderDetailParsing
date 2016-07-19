@@ -13,7 +13,7 @@ import org.zendesk.client.v2.model.Comment;
 import org.zendesk.client.v2.model.CustomFieldValue;
 import org.zendesk.client.v2.model.Ticket;
 
-public class Test {
+public class TestZenDesk {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -30,7 +30,7 @@ public class Test {
 			Ticket ticket = zd.getTicket(19284);
 			
 			
-			ArrayList<CustomFieldValue> custom_fields = new ArrayList<CustomFieldValue>();
+			// ArrayList<CustomFieldValue> custom_fields = new ArrayList<CustomFieldValue>();
 			
 			
 			//CustomFieldValue cc = new CustomFieldValue((long)24024776, "gogogogo");
@@ -55,7 +55,7 @@ public class Test {
 			ticket.setCustomFields(custom_fields);
 			*/
 			
-			System.out.println(ticket.getId());
+			//System.out.println(ticket.getId());
 			// zd.updateTicket(ticket);
 			zd.close();
 		}

@@ -7,9 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.zendesk.client.v2.Zendesk;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.GridBagLayout;
@@ -18,6 +21,14 @@ import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.URL;
+import java.net.UnknownHostException;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -46,8 +57,13 @@ public class Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					if (isThisComputer()) {
 					Login frame = new Login();
 					frame.setVisible(true);
+					}
+					else {
+						
+					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -153,5 +169,60 @@ public class Login extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			System.exit(0);
 		}
+	}
+	public static boolean isThisComputer() {
+		String sha1 = "";
+		try {
+		FileReader reader = new FileReader("sha1.txt");
+		BufferedReader in = new BufferedReader(reader);
+		sha1 = in.readLine();
+		}
+		catch (Exception e1) {
+			return false;
+		}
+		if (sha1.equals(thisComputer())) 
+			return true;
+		else 
+			return false;
+	}
+	
+	public static String thisComputer() {
+		String sha1 = "";
+		InetAddress ip;
+		String originalsha1 = "";
+		try {
+				
+			ip = InetAddress.getLocalHost();
+			try {
+				URL whatismyip = new URL("http://myexternalip.com/raw");
+				BufferedReader in = new BufferedReader(new InputStreamReader(
+				                whatismyip.openStream()));
+
+				String ip1 = in.readLine();
+				originalsha1 = ip1;
+			}
+			catch (Exception e1) {
+				e1.getMessage();
+			}
+			
+			NetworkInterface network = NetworkInterface.getByInetAddress(ip);
+				
+			byte[] mac = network.getHardwareAddress();
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < mac.length; i++) {
+				sb.append(String.format("%02X", mac[i]));		
+			}
+			originalsha1 += sb;
+		} catch (UnknownHostException e) {
+			
+			e.printStackTrace();
+			
+		} catch (SocketException e){
+				
+			e.printStackTrace();
+				
+		}
+		sha1 = DigestUtils.sha1Hex(originalsha1);
+		return sha1;
 	}
 }

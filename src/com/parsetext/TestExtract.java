@@ -2,7 +2,7 @@ package com.parsetext;
 import java.io.*;
 
 
-public class Extract {
+public class TestExtract {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -30,11 +30,12 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+
+import org.joda.time.LocalDateTime;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -97,6 +98,7 @@ public class OrderTool extends JFrame {
 	private final Action action_4 = new SwingAction_4();
 	private String loginID;
 	private String passwd;
+	private LocalDateTime dt;
 
 	/**
 	 * Launch the application.
@@ -131,6 +133,8 @@ public class OrderTool extends JFrame {
 		lblUnuCustomerSupport.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblUnuCustomerSupport);
 		
+		dt = new LocalDateTime();
+		
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(10, 47, 418, 616);
 		contentPane.add(scrollPane_1);
@@ -156,8 +160,8 @@ public class OrderTool extends JFrame {
 					}
 				// execute the python file. The python file need test.txt as input and will output a data.json file
 				try {
-					String path = "C:/Users/unu/Downloads/intern/";	
-					ProcessBuilder pb = new ProcessBuilder ("python", path + "extract4.py");
+					// String path = "C:/Users/unu/Downloads/intern/";	
+					ProcessBuilder pb = new ProcessBuilder ("python", "extract4.py");
 					Process p = pb.start();
 					
 					BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -307,7 +311,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Order number has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Order number has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -325,7 +329,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": SKU number has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": SKU number has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -343,7 +347,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": ASIN number has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": ASIN number has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -361,7 +365,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Customer name has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Customer name has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -379,7 +383,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Address Line 1 has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Address Line 1 has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -397,7 +401,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Address Linee 2 has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Address Linee 2 has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -415,7 +419,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": City has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": City has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -433,7 +437,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": State has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": State has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -451,7 +455,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Zipcode(main) has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Zipcode(main) has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -469,7 +473,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Sub Zipcode has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Sub Zipcode has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -487,7 +491,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": phone number has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": phone number has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -517,7 +521,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.append(LocalDateTime.now().toString() + ": Raw Date has been copied to clipboard.\n");
+					logArea.append(dt.toString() + ": Raw Date has been copied to clipboard.\n");
 				}
 			}
 		});
@@ -556,7 +560,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Product information has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Product information has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -579,7 +583,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.insert(LocalDateTime.now().toString() + ": Total refund has been copied to clipboard.\n", 0);
+					logArea.insert(dt.toString() + ": Total refund has been copied to clipboard.\n", 0);
 				}
 			}
 		});
@@ -601,7 +605,7 @@ public class OrderTool extends JFrame {
 					StringSelection data = new StringSelection(sltext);
 					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 					clipboard.setContents(data, data);
-					logArea.append(LocalDateTime.now().toString() + ": Purchase Date has been copied to clipboard.\n");
+					logArea.append(dt.toString() + ": Purchase Date has been copied to clipboard.\n");
 				}
 			}
 		});
@@ -649,6 +653,12 @@ public class OrderTool extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Populate data to zendesk");
 		}
 		public void actionPerformed(ActionEvent e) {
+			int selectedOption = JOptionPane.showConfirmDialog(null, 
+					"Please make sure the ticket number and information are correct!",
+					"Warning",
+					JOptionPane.YES_NO_OPTION);
+			if (selectedOption == JOptionPane.YES_OPTION) {
+			
 			String str = ticketNField.getText();
 			int ticketID = Integer.parseInt(str);
 			try {
@@ -695,7 +705,7 @@ public class OrderTool extends JFrame {
 				System.out.println(err);
 				err.getMessage();
 			}
-			 
+			}
 		}
 	}
 	// clear action
