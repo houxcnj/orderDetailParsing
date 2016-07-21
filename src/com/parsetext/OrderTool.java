@@ -39,6 +39,8 @@ import org.joda.time.LocalDateTime;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.python.core.PyObject;
+import org.python.util.PythonInterpreter;
 import org.zendesk.client.v2.Zendesk;
 import org.zendesk.client.v2.model.Comment;
 import org.zendesk.client.v2.model.CustomFieldValue;
@@ -161,7 +163,7 @@ public class OrderTool extends JFrame {
 					}
 				// execute the python file. The python file need test.txt as input and will output a data.json file
 				try {
-					// String path = "C:/Users/unu/Downloads/intern/";	
+					/*	
 					ProcessBuilder pb = new ProcessBuilder ("python", "extract4.py");
 					Process p = pb.start();
 					
@@ -184,6 +186,18 @@ public class OrderTool extends JFrame {
 					// read .json file and parse it.
 					FileReader reader = new FileReader("data.json");
 					JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+					*/
+					
+					PythonInterpreter extract = new PythonInterpreter();
+					extract.execfile("extract4.py");
+					PyObject error = extract.get("error");
+					if (error.toString().equalsIgnoreCase("true")) {
+						JOptionPane.showMessageDialog(null, "Illegal input text, please try it again!");
+						inputText.setText("");
+					}
+					else {
+					PyObject order = extract.get("res");
+					JSONObject jsonData = (JSONObject) new JSONParser().parse(order.toString());
 					
 					// get value from each key in json file. 
 					orderID = (String) jsonData.get("orderID");
@@ -221,6 +235,7 @@ public class OrderTool extends JFrame {
 						refundField.setForeground(Color.GREEN);
 					else
 						refundField.setForeground(Color.RED);
+					}
 					
 					}
 					catch (Exception err) 

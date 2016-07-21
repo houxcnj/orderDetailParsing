@@ -24,6 +24,7 @@ import javax.swing.JDialog;
 
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
@@ -152,6 +153,11 @@ public class Login extends JFrame {
 				zd.getTickets().iterator().hasNext();
 				zd.close();
 				txtpnInfo.append("\nLogin successful");
+				if (!isThisPerson()) {
+					Config cfid = new Config();
+					//cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					cfid.setVisible(true);
+				}
 				OrderTool tool = new OrderTool();
 				tool.setVisible(true);
 				tool.setLoginID(loginID);
@@ -228,5 +234,15 @@ public class Login extends JFrame {
 		}
 		sha1 = DigestUtils.sha1Hex(originalsha1);
 		return sha1;
+	}
+	public boolean isThisPerson() {
+		String filePath = loginID + "config.json";
+		File f = new File(filePath);
+		if(f.exists() && !f.isDirectory()) { 
+		    return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
