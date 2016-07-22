@@ -83,6 +83,7 @@ public class OrderTool extends JFrame {
 	private final Action action_4 = new SwingAction_4();
 	private String loginID;
 	private String passwd;
+	private String brand;
 	
 	private JSONObject fieldData;
 
@@ -665,7 +666,8 @@ public class OrderTool extends JFrame {
 			String str = ticketNField.getText();
 			int ticketID = Integer.parseInt(str);
 			try {
-				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
+				String support = brand +".zendesk.com";
+				Zendesk zd = new Zendesk.Builder("https://" + support)
 						.setUsername(loginID).setPassword(passwd)
 				        // .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
 				        .build();
@@ -756,7 +758,7 @@ public class OrderTool extends JFrame {
 					JOptionPane.YES_NO_OPTION);
 			if (selectedOption == JOptionPane.YES_OPTION) {
 				try {
-					String logfile = LocalDateTime.now().toString() +"log";
+					String logfile = LocalDateTime.now().toString().replaceAll(":", "") +"log";
 					BufferedWriter out = new BufferedWriter(new FileWriter(logfile));
 					out.write(logArea.getText());
 					out.flush();
@@ -789,7 +791,8 @@ public class OrderTool extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				
-				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
+				String support = brand +".zendesk.com";
+				Zendesk zd = new Zendesk.Builder("https://" + support)
 						.setUsername(loginID).setPassword(passwd).build();
 				/*
 				if (ticket_bak.equals(null))
@@ -799,6 +802,8 @@ public class OrderTool extends JFrame {
 				*/
 				//System.out.println(ticket_bak.getCustomFields().get(0).getValue());
 				zd.updateTicket(ticket_bak);
+				String mm = ": ticket " + ticket_bak.getId() + "has been restored.\n";
+				logArea.append(LocalDateTime.now().toString() + mm);
 				zd.close();
 			}
 			catch (Exception err) {
@@ -811,5 +816,8 @@ public class OrderTool extends JFrame {
 	}
 	public void setPassword (String pass) {
 		passwd = pass;
+	}
+	public void setBrand (String bd) {
+		brand = bd;
 	}
 }

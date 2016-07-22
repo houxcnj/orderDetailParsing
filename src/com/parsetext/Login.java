@@ -44,6 +44,8 @@ public class Login extends JFrame {
 	private String loginID;
 	private String passwd;
 	private JTextArea txtpnInfo;
+	private String brand;
+	private JTextField brandField;
 
 	/**
 	 * Launch the application.
@@ -88,22 +90,22 @@ public class Login extends JFrame {
 		
 		JLabel lblLoginId = new JLabel("Login ID: ");
 		lblLoginId.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblLoginId.setBounds(74, 53, 89, 33);
+		lblLoginId.setBounds(74, 87, 89, 33);
 		contentPane.add(lblLoginId);
 		
 		JLabel lblPassword = new JLabel("Password: ");
 		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblPassword.setBounds(74, 110, 89, 33);
+		lblPassword.setBounds(74, 124, 89, 33);
 		contentPane.add(lblPassword);
 		
 		idField = new JTextField();
-		idField.setBounds(159, 57, 190, 28);
+		idField.setBounds(159, 91, 190, 28);
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
 		passField = new JPasswordField();
 		passField.setColumns(10);
-		passField.setBounds(159, 115, 190, 28);
+		passField.setBounds(159, 129, 190, 28);
 		contentPane.add(passField);
 		
 		JButton btnLogin = new JButton("Login");
@@ -130,6 +132,16 @@ public class Login extends JFrame {
 		txtpnInfo.setForeground(Color.BLUE);
 		scrollPane.setViewportView(txtpnInfo);
 		txtpnInfo.setEditable(false);
+		
+		JLabel lblBrand = new JLabel("Brand: ");
+		lblBrand.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblBrand.setBounds(74, 46, 89, 33);
+		contentPane.add(lblBrand);
+		
+		brandField = new JTextField();
+		brandField.setColumns(10);
+		brandField.setBounds(159, 50, 190, 28);
+		contentPane.add(brandField);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -139,8 +151,10 @@ public class Login extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			loginID = idField.getText();
 			passwd = new String(passField.getPassword());
+			brand = brandField.getText();
 			try {
-				Zendesk zd = new Zendesk.Builder("https://unu.zendesk.com")
+				String support = brand +".zendesk.com";
+				Zendesk zd = new Zendesk.Builder("https://" + support)
 						.setUsername(loginID).setPassword(passwd)
 				        // .setToken("g0YVCKIJdndLlGFZLouccN38rrgefbAiIL5SrACZ") // or .setPassword("...")
 				        .build();
@@ -151,6 +165,7 @@ public class Login extends JFrame {
 					Config cfid = new Config();
 					cfid.setLoginID(loginID);
 					cfid.setPassword(passwd);
+					cfid.setBrand(brand);
 					cfid.setLocationRelativeTo(null);
 					cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					cfid.setVisible(true);
@@ -160,6 +175,7 @@ public class Login extends JFrame {
 				tool.setVisible(true);
 				tool.setLoginID(loginID);
 				tool.setPassword(passwd);
+				tool.setBrand(brand);
 				tool.setLocationRelativeTo(null);
 				dispose();
 				}

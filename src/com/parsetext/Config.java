@@ -43,6 +43,7 @@ public class Config extends JDialog {
 
 	private String loginID;
 	private String passwd;
+	private String brand;
 	
 	/**
 	 * Launch the application.
@@ -263,6 +264,7 @@ public class Config extends JDialog {
 			tool.setVisible(true);
 			tool.setLoginID(loginID);
 			tool.setPassword(passwd);
+			tool.setBrand(brand);
 			dispose();
 				}
 			}
@@ -278,6 +280,9 @@ public class Config extends JDialog {
 	
 	public void setPassword (String pass) {
 		passwd = pass;
+	}
+	public void setBrand (String bd) {
+		brand = bd;
 	}
 	private class SwingAction_1 extends AbstractAction {
 		public SwingAction_1() {
