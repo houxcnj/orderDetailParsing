@@ -7,11 +7,17 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import org.json.simple.JSONObject;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 import javax.swing.Action;
 
 public class Config extends JDialog {
@@ -33,10 +39,15 @@ public class Config extends JDialog {
 	private JTextField txtRefund;
 	private JTextField txtPhone;
 	private final Action action = new SwingAction();
+	private final Action action_1 = new SwingAction_1();
 
+	private String loginID;
+	private String passwd;
+	
 	/**
 	 * Launch the application.
 	 */
+	/*
 	public static void main(String[] args) {
 		try {
 			Config dialog = new Config();
@@ -46,6 +57,7 @@ public class Config extends JDialog {
 			e.printStackTrace();
 		}
 	}
+	*/
 
 	/**
 	 * Create the dialog.
@@ -204,6 +216,7 @@ public class Config extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
+				cancelButton.setAction(action_1);
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
@@ -216,26 +229,63 @@ public class Config extends JDialog {
 		}
 		public void actionPerformed(ActionEvent e) {
 			try {
-			Integer.parseInt(txtOrderid.getText());
-			Integer.parseInt(txtName.getText());
-			Integer.parseInt(txtAddress.getText());
-			Integer.parseInt(txtAddress_1.getText());
-			Integer.parseInt(txtCity.getText());
-			Integer.parseInt(txtState.getText());
-			Integer.parseInt(txtCountry.getText());
-			Integer.parseInt(txtZip.getText());
-			Integer.parseInt(txtZip_1.getText());
-			Integer.parseInt(txtProduct.getText());
-			Integer.parseInt(txtAsin.getText());
-			Integer.parseInt(txtSku.getText());
-			Integer.parseInt(txtPurchaseDate.getText());
-			Integer.parseInt(txtRefund.getText());
-			Integer.parseInt(txtPhone.getText());
+				int selectedOption = JOptionPane.showConfirmDialog(null, 
+						"Please make sure the field number is correct!",
+						"Warning",
+						JOptionPane.YES_NO_OPTION);
+				if (selectedOption == JOptionPane.YES_OPTION) {
+				String filePath = loginID + "config.json";
+				BufferedWriter out = new BufferedWriter(new FileWriter(filePath));
+				JSONObject obj = new JSONObject();
+				
+			obj.put("orderID", Integer.parseInt(txtOrderid.getText()));
+			obj.put("fullName", Integer.parseInt(txtName.getText()));
+			obj.put("address1", Integer.parseInt(txtAddress.getText()));
+			obj.put("address2", Integer.parseInt(txtAddress_1.getText()));
+			obj.put("city", Integer.parseInt(txtCity.getText()));
+			obj.put("state", Integer.parseInt(txtState.getText()));
+			obj.put("country", Integer.parseInt(txtCountry.getText()));
+			obj.put("zipcode1", Integer.parseInt(txtZip.getText()));
+			obj.put("zipcode2", Integer.parseInt(txtZip_1.getText()));
+			obj.put("product", Integer.parseInt(txtProduct.getText()));
+			obj.put("asin", Integer.parseInt(txtAsin.getText()));
+			obj.put("sku", Integer.parseInt(txtSku.getText()));
+			obj.put("purchase_date", Integer.parseInt(txtPurchaseDate.getText()));
+			obj.put("refund", Integer.parseInt(txtRefund.getText()));
+			obj.put("phone", Integer.parseInt(txtPhone.getText()));
+			
+			out.write(obj.toJSONString());
+			out.flush();
+			out.close();
+			
+			JOptionPane.showMessageDialog(null, "Done!");
+			OrderTool tool = new OrderTool();
+			tool.setVisible(true);
+			tool.setLoginID(loginID);
+			tool.setPassword(passwd);
+			dispose();
+				}
 			}
 			catch (Exception e1) {
 				e1.getMessage();
 				JOptionPane.showMessageDialog(null, "Please input numbers!");
 			}
+		}
+	}
+	public void setLoginID (String id) {
+		loginID = id;
+	}
+	
+	public void setPassword (String pass) {
+		passwd = pass;
+	}
+	private class SwingAction_1 extends AbstractAction {
+		public SwingAction_1() {
+			putValue(NAME, "Cancel");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+			dispose();
 		}
 	}
 }

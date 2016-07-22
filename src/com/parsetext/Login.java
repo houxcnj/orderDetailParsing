@@ -1,6 +1,5 @@
 package com.parsetext;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -11,13 +10,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.zendesk.client.v2.Zendesk;
 
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 import java.awt.Font;
-import javax.swing.SwingConstants;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -36,7 +29,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JPasswordField;
-import javax.swing.JTextPane;
 import javax.swing.JScrollPane;
 import java.awt.Color;
 import javax.swing.JTextArea;
@@ -62,10 +54,12 @@ public class Login extends JFrame {
 				try {
 					if (isThisComputer()) {
 					Login frame = new Login();
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 					}
 					else {
 						Confirm cf = new Confirm();
+						cf.setLocationRelativeTo(null);
 						cf.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 						cf.setVisible(true);
 					}
@@ -155,14 +149,20 @@ public class Login extends JFrame {
 				txtpnInfo.append("\nLogin successful");
 				if (!isThisPerson()) {
 					Config cfid = new Config();
-					//cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					cfid.setLoginID(loginID);
+					cfid.setPassword(passwd);
+					cfid.setLocationRelativeTo(null);
+					cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					cfid.setVisible(true);
 				}
+				else {
 				OrderTool tool = new OrderTool();
 				tool.setVisible(true);
 				tool.setLoginID(loginID);
 				tool.setPassword(passwd);
+				tool.setLocationRelativeTo(null);
 				dispose();
+				}
 			} catch (Exception e1) {
 				System.out.println(e1.getMessage());
 				txtpnInfo.append("\nPlease check your ID and Password!");
@@ -186,6 +186,7 @@ public class Login extends JFrame {
 		FileReader reader = new FileReader("sha1");
 		BufferedReader in = new BufferedReader(reader);
 		sha1 = in.readLine();
+		in.close();
 		}
 		catch (Exception e1) {
 			return false;

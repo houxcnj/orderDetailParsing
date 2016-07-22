@@ -108,8 +108,11 @@ public class Unlock extends JDialog {
 				{
 						e1.getMessage();
 				}
-				JOptionPane.showMessageDialog(null, "Done. please restart application!");
-				System.exit(0);
+				JOptionPane.showMessageDialog(null, "Done. please login again!");
+				dispose();
+				Login frame = new Login();
+				frame.setLocationRelativeTo(null);
+				frame.setVisible(true);
 			}
 			else 
 				JOptionPane.showMessageDialog(null, "Wrong Password, Try again!");
@@ -164,4 +167,5 @@ public class Unlock extends JDialog {
 			System.exit(0);
 		}
 	}
+
 }

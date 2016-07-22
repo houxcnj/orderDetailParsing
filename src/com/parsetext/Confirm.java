@@ -1,6 +1,5 @@
 package com.parsetext;
 
-import java.awt.EventQueue;
 
 import javax.swing.JDialog;
 import javax.swing.JButton;
@@ -81,6 +80,7 @@ public class Confirm extends JDialog {
 		public void actionPerformed(ActionEvent e) {
 			Unlock sv = new Unlock();
 			sv.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			sv.setLocationRelativeTo(null);
 			sv.setVisible(true);
 			dispose();
 		}
