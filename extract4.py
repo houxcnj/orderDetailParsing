@@ -2,6 +2,8 @@ import json
 import os.path
 import datetime
 
+
+
 def createOrder(lines):
 
     order = {}
@@ -27,7 +29,7 @@ def createOrder(lines):
         try:
             if line.startswith("Order ID"):
                 orderId = line.split("#")
-                order['orderID'] = orderId[-1]
+                order['orderID'] = orderId[-1].split()[0]
 
             elif line.startswith( 'Ship to'):
                 name_words = line.split()
@@ -54,7 +56,7 @@ def createOrder(lines):
 
             elif line.startswith('Phone'):
                 phone = line.split(":")
-                order['phone'] = phone[-1]
+                order['phone'] = phone[-1].strip()
 
 
             elif line.startswith('Purchase date'):
@@ -78,20 +80,39 @@ def createOrder(lines):
 
             elif lines[index+1].startswith( 'SKU:'):
                 sku_words = lines[index+1].split(":")
-                order['sku'] = sku_words[1]
+                sku = sku_words[1].strip().split("_")
+                order['sku'] = sku[0]
                 order['product']  = line
                 #print "information: ",order['information']
                 #print "SKU: ",order['sku']
 
             elif line.startswith( 'ASIN:'):
                 asin_words = line.split(":")
-                order['asin'] = asin_words[1]
+                order['asin'] = asin_words[1].strip()
                 #print "ASIN: ", order['asin']
 
         except IndexError:
             pass
 
-    
+
+
+
+    return order
+
+# filename = raw_input("Enter file:")
+# if len(filename)<1 :
+filename = "test.txt"
+#hand = open(filename, "r")
+#lines = [line.strip() for line in hand.readlines()]
+#createOrder(lines)
+#hand.close()
+with open('data.json', 'a') as fp:
+    hand = open(filename, "r")
+    lines = [line.strip() for line in hand.readlines()]
+    #print lines
+    error = False
+    order = createOrder(lines)
+    hand.close()
     count = 0
     for k, v in order.items():
         print k, ": ", v
@@ -112,26 +133,12 @@ def createOrder(lines):
         message += "ASIN: " + order['asin'] + "\n"
         message += "Purchase Date: " + order['purchase_date'] + "\n"
         message += "Refund: " + order['refund']
-        
+
     else:
         print "Sorry, please input again!"
-    
-    return order
-
-# filename = raw_input("Enter file:")
-# if len(filename)<1 : 
-filename = "test.txt"
-#hand = open(filename, "r")
-#lines = [line.strip() for line in hand.readlines()]
-#createOrder(lines)
-#hand.close()
-with open('data.json', 'w') as fp:
-    hand = open(filename, "r")
-    lines = [line.strip() for line in hand.readlines()]
-    #print lines
-    order = createOrder(lines)
-    hand.close()
+        error = True
     json.dump(order, fp, indent = 2)
+    res = json.dumps(order)
     print " "
     print "..........................."
     print " "

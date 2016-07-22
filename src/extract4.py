@@ -29,7 +29,7 @@ def createOrder(lines):
         try:
             if line.startswith("Order ID"):
                 orderId = line.split("#")
-                order['orderID'] = orderId[-1]
+                order['orderID'] = orderId[-1].split()[0]
 
             elif line.startswith( 'Ship to'):
                 name_words = line.split()
@@ -56,7 +56,7 @@ def createOrder(lines):
 
             elif line.startswith('Phone'):
                 phone = line.split(":")
-                order['phone'] = phone[-1]
+                order['phone'] = phone[-1].strip()
 
 
             elif line.startswith('Purchase date'):
@@ -80,7 +80,7 @@ def createOrder(lines):
 
             elif lines[index+1].startswith( 'SKU:'):
                 sku_words = lines[index+1].split(":")
-                sku = sku_words[1].split("_")
+                sku = sku_words[1].strip().split("_")
                 order['sku'] = sku[0]
                 order['product']  = line
                 #print "information: ",order['information']
@@ -88,7 +88,7 @@ def createOrder(lines):
 
             elif line.startswith( 'ASIN:'):
                 asin_words = line.split(":")
-                order['asin'] = asin_words[1]
+                order['asin'] = asin_words[1].strip()
                 #print "ASIN: ", order['asin']
 
         except IndexError:
