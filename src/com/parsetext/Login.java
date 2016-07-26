@@ -46,6 +46,7 @@ public class Login extends JFrame {
 	private JTextArea txtpnInfo;
 	private String brand;
 	private JTextField brandField;
+	private final Action action_2 = new SwingAction_2();
 
 	/**
 	 * Launch the application.
@@ -114,12 +115,12 @@ public class Login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnLogin.setBounds(74, 168, 105, 33);
+		btnLogin.setBounds(60, 169, 105, 33);
 		contentPane.add(btnLogin);
 		
 		JButton btnExit = new JButton("Exit");
 		btnExit.setAction(action_1);
-		btnExit.setBounds(255, 168, 105, 33);
+		btnExit.setBounds(312, 169, 105, 33);
 		contentPane.add(btnExit);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -142,6 +143,15 @@ public class Login extends JFrame {
 		brandField.setColumns(10);
 		brandField.setBounds(159, 50, 190, 28);
 		contentPane.add(brandField);
+		
+		JButton btnSettings = new JButton("Settings");
+		btnSettings.setAction(action_2);
+		btnSettings.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSettings.setBounds(185, 169, 105, 33);
+		contentPane.add(btnSettings);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -260,6 +270,34 @@ public class Login extends JFrame {
 		}
 		else {
 			return false;
+		}
+	}
+	private class SwingAction_2 extends AbstractAction {
+		public SwingAction_2() {
+			putValue(NAME, "Settings");
+			putValue(SHORT_DESCRIPTION, "Change your configuration");
+		}
+		public void actionPerformed(ActionEvent e) {
+			try {
+				loginID = idField.getText();
+				passwd = new String(passField.getPassword());
+				brand = brandField.getText();
+			if (isThisPerson()) {
+				
+				Config cfid = new Config();
+				cfid.setLoginID(loginID);
+				cfid.setPassword(passwd);
+				cfid.setBrand(brand);
+				cfid.setLocationRelativeTo(null);
+				cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				cfid.setVisible(true);
+			}
+			}
+			catch (Exception e1)
+			{
+				System.out.println(e1.getMessage());
+				txtpnInfo.append("\nPlease check your ID if you login before! Otherwise just login!");
+			}
 		}
 	}
 }

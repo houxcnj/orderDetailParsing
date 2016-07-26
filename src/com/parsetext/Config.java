@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -16,6 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 import javax.swing.Action;
@@ -74,76 +76,91 @@ public class Config extends JDialog {
 		txtOrderid.setBounds(360, 6, 130, 26);
 		contentPanel.add(txtOrderid);
 		txtOrderid.setColumns(10);
+		txtOrderid.setText(getDefaultText("orderID"));
 		
 		txtName = new JTextField();
 		txtName.setBounds(103, 6, 130, 26);
 		contentPanel.add(txtName);
 		txtName.setColumns(10);
+		txtName.setText(getDefaultText("fullName"));
 		
 		txtAddress = new JTextField();
 		txtAddress.setBounds(103, 44, 130, 26);
 		contentPanel.add(txtAddress);
 		txtAddress.setColumns(10);
+		txtAddress.setText(getDefaultText("address1"));
 		
 		txtAddress_1 = new JTextField();
 		txtAddress_1.setBounds(103, 82, 130, 26);
 		contentPanel.add(txtAddress_1);
 		txtAddress_1.setColumns(10);
+		txtAddress_1.setText(getDefaultText("address2"));
 		
 		txtCity = new JTextField();
 		txtCity.setBounds(103, 120, 130, 26);
 		contentPanel.add(txtCity);
 		txtCity.setColumns(10);
+		txtCity.setText(getDefaultText("city"));
 		
 		txtState = new JTextField();
 		txtState.setBounds(103, 158, 130, 26);
 		contentPanel.add(txtState);
 		txtState.setColumns(10);
+		txtState.setText(getDefaultText("state"));
 		
 		txtCountry = new JTextField();
 		txtCountry.setBounds(103, 196, 130, 26);
 		contentPanel.add(txtCountry);
 		txtCountry.setColumns(10);
+		txtCountry.setText(getDefaultText("country"));
 		
 		txtZip = new JTextField();
 		txtZip.setBounds(103, 234, 130, 26);
 		contentPanel.add(txtZip);
 		txtZip.setColumns(10);
+		txtZip.setText(getDefaultText("zipcode1"));
 		
 		txtZip_1 = new JTextField();
 		txtZip_1.setBounds(103, 272, 130, 26);
 		contentPanel.add(txtZip_1);
 		txtZip_1.setColumns(10);
+		txtZip_1.setText(getDefaultText("zipcode2"));
 		
 		txtProduct = new JTextField();
 		txtProduct.setBounds(360, 44, 130, 26);
 		contentPanel.add(txtProduct);
 		txtProduct.setColumns(10);
+		txtProduct.setText(getDefaultText("product"));
 		
 		txtAsin = new JTextField();
 		txtAsin.setBounds(360, 82, 130, 26);
 		contentPanel.add(txtAsin);
 		txtAsin.setColumns(10);
+		txtAsin.setText(getDefaultText("asin"));
 		
 		txtSku = new JTextField();
 		txtSku.setBounds(360, 120, 130, 26);
 		contentPanel.add(txtSku);
 		txtSku.setColumns(10);
+		txtSku.setText(getDefaultText("sku"));
 		
 		txtPurchaseDate = new JTextField();
 		txtPurchaseDate.setBounds(360, 158, 130, 26);
 		contentPanel.add(txtPurchaseDate);
 		txtPurchaseDate.setColumns(10);
+		txtPurchaseDate.setText(getDefaultText("purchase_date"));
 		
 		txtRefund = new JTextField();
 		txtRefund.setBounds(360, 196, 130, 26);
 		contentPanel.add(txtRefund);
 		txtRefund.setColumns(10);
+		txtRefund.setText(getDefaultText("refund"));
 		
 		txtPhone = new JTextField();
 		txtPhone.setBounds(360, 234, 130, 26);
 		contentPanel.add(txtPhone);
 		txtPhone.setColumns(10);
+		txtPhone.setText(getDefaultText("phone"));
 		
 		JLabel lblName = new JLabel("Name");
 		lblName.setBounds(6, 11, 85, 16);
@@ -292,5 +309,21 @@ public class Config extends JDialog {
 		public void actionPerformed(ActionEvent e) {
 			dispose();
 		}
+	}
+	
+	private String getDefaultText(String lbl) {
+		String result = "0";
+		try {
+		String filePath = loginID + "config.json";
+		FileReader reader = new FileReader(filePath);
+		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+		result = (String) jsonData.get(lbl);
+		return result;
+		}
+		catch (Exception e1) {
+			e1.getMessage();
+			return result;
+		}
+		
 	}
 }
