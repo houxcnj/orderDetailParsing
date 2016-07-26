@@ -172,10 +172,12 @@ public class Login extends JFrame {
 				zd.close();
 				txtpnInfo.append("\nLogin successful");
 				if (!isThisPerson()) {
-					Config cfid = new Config();
+					Config cfid = new Config(loginID, passwd, brand);
+					/*
 					cfid.setLoginID(loginID);
 					cfid.setPassword(passwd);
 					cfid.setBrand(brand);
+					*/
 					cfid.setLocationRelativeTo(null);
 					cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					cfid.setVisible(true);
@@ -278,16 +280,18 @@ public class Login extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Change your configuration");
 		}
 		public void actionPerformed(ActionEvent e) {
+			loginID = idField.getText();
+			passwd = new String(passField.getPassword());
+			brand = brandField.getText();
 			try {
-				loginID = idField.getText();
-				passwd = new String(passField.getPassword());
-				brand = brandField.getText();
-			if (isThisPerson()) {
 				
-				Config cfid = new Config();
+			if (isThisPerson()) {
+				Config cfid = new Config(loginID, passwd, brand);
+				/*
 				cfid.setLoginID(loginID);
 				cfid.setPassword(passwd);
 				cfid.setBrand(brand);
+				*/
 				cfid.setLocationRelativeTo(null);
 				cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 				cfid.setVisible(true);

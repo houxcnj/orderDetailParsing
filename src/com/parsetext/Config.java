@@ -65,7 +65,11 @@ public class Config extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Config() {
+	public Config(String id, String pass, String bd) {
+		loginID = id;
+		passwd = pass;
+		brand = bd;
+		
 		setBounds(100, 100, 522, 394);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -76,6 +80,7 @@ public class Config extends JDialog {
 		txtOrderid.setBounds(360, 6, 130, 26);
 		contentPanel.add(txtOrderid);
 		txtOrderid.setColumns(10);
+		System.out.println(loginID);
 		txtOrderid.setText(getDefaultText("orderID"));
 		
 		txtName = new JTextField();
@@ -310,20 +315,21 @@ public class Config extends JDialog {
 			dispose();
 		}
 	}
-	
+	// BUGS!!!!
 	private String getDefaultText(String lbl) {
 		String result = "0";
-		try {
 		String filePath = loginID + "config.json";
+		try {
+		
 		FileReader reader = new FileReader(filePath);
 		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
-		result = (String) jsonData.get(lbl);
-		return result;
+		result = String.valueOf((long) jsonData.get(lbl));
+		reader.close();
 		}
 		catch (Exception e1) {
-			e1.getMessage();
-			return result;
+			System.out.println(e1.getMessage());
+			
 		}
-		
+		return result;
 	}
 }
