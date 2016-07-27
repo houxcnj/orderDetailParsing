@@ -33,7 +33,7 @@ def createOrder(lines):
 
             elif line.startswith( 'Ship to'):
                 name_words = line.split()
-                order['name']  = " ".join(name_words[2:])
+                order['name']  = " ".join(name_words[2:]).title()
 
                 address = ""
                 for i in range(3):
@@ -46,9 +46,12 @@ def createOrder(lines):
                 order['city'] = address_words[-2]
 
                 state_zipcode = address_words[-1].split()
-                order['state'] = state_zipcode[0]
+                if len(state_zipcode) < 3:
+                    order['state'] = state_zipcode[0]
+                else:
+                    order['state'] = " ".join(state_zipcode[:-1])
 
-                zipcode = state_zipcode[1].split("-")
+                zipcode = state_zipcode[-1].split("-")
                 order['zipcode1'] = zipcode[0]
 
                 if len(zipcode) > 1:
