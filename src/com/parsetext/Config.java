@@ -315,7 +315,7 @@ public class Config extends JDialog {
 			dispose();
 		}
 	}
-	// BUGS!!!!
+	// get the custome field Id from json file.
 	private String getDefaultText(String lbl) {
 		String result = "0";
 		String filePath = loginID + "config.json";

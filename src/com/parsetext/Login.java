@@ -125,7 +125,7 @@ public class Login extends JFrame {
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane.setBounds(74, 212, 286, 38);
+		scrollPane.setBounds(0, 214, 450, 58);
 		contentPane.add(scrollPane);
 		
 		txtpnInfo = new JTextArea();
@@ -284,7 +284,12 @@ public class Login extends JFrame {
 			passwd = new String(passField.getPassword());
 			brand = brandField.getText();
 			try {
-				
+				String support = brand +".zendesk.com";
+				Zendesk zd = new Zendesk.Builder("https://" + support)
+						.setUsername(loginID).setPassword(passwd)
+				        .build();
+				zd.getTickets().iterator().hasNext();
+				zd.close();
 			if (isThisPerson()) {
 				Config cfid = new Config(loginID, passwd, brand);
 				/*
@@ -296,11 +301,15 @@ public class Login extends JFrame {
 				cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 				cfid.setVisible(true);
 			}
+			else {
+				txtpnInfo.append("\nPlease check your ID if you login before! Otherwise just login!");
+			}
+			
 			}
 			catch (Exception e1)
 			{
 				System.out.println(e1.getMessage());
-				txtpnInfo.append("\nPlease check your ID if you login before! Otherwise just login!");
+				txtpnInfo.append("\nPlease check your ID or Password!");
 			}
 		}
 	}
