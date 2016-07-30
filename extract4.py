@@ -27,11 +27,11 @@ def createOrder(lines):
         # print "..................",index, line
 
         try:
-            if line.startswith("Order ID"):
+            if line.startswith("Order ID") and not order['orderID']:
                 orderId = line.split("#")
                 order['orderID'] = orderId[-1].split()[0]
 
-            elif line.startswith( 'Ship to'):
+            elif line.startswith( 'Ship to') and not order['name']:
                 name_words = line.split()
                 order['name']  = " ".join(name_words[2:]).title()
 
@@ -57,12 +57,12 @@ def createOrder(lines):
                 if len(zipcode) > 1:
                     order['zipcode2'] = zipcode[-1]
 
-            elif line.startswith('Phone'):
+            elif line.startswith('Phone') and not order['phone']:
                 phone = line.split(":")
                 order['phone'] = phone[-1].strip()
 
 
-            elif line.startswith('Purchase date'):
+            elif line.startswith('Purchase date') and not order['purchase_date']:
                 words = line.split("\t")
                 if len(words) > 1:
                     d =" ".join(words[1].split()[1:4])
@@ -75,13 +75,13 @@ def createOrder(lines):
                 #print "dates ", words
 
 
-            elif line.startswith( 'Refund total'):
+            elif line.startswith( 'Refund total') and not order['refund']:
                 refundAmount = line.split()
                 order['refund'] = refundAmount[-1]
                 #print "refund: ", order['refund']
 
 
-            elif lines[index+1].startswith( 'SKU:'):
+            elif lines[index+1].startswith( 'SKU:') and not order['sku']:
                 sku_words = lines[index+1].split(":")
                 sku = sku_words[1].strip().split("_")
                 order['sku'] = sku[0]
@@ -89,7 +89,7 @@ def createOrder(lines):
                 #print "information: ",order['information']
                 #print "SKU: ",order['sku']
 
-            elif line.startswith( 'ASIN:'):
+            elif line.startswith( 'ASIN:') and not order['asin']:
                 asin_words = line.split(":")
                 order['asin'] = asin_words[1].strip()
                 #print "ASIN: ", order['asin']
@@ -140,8 +140,8 @@ with open('data.json', 'a') as fp:
     else:
         print "Sorry, please input again!"
         error = True
-    json.dump(order, fp, indent = 2)
-    res = json.dumps(order)
+    json.dump(order, fp, indent = 2, ensure_ascii = False)
+    res = json.dumps(order, ensure_ascii = False)
     print " "
     print "..........................."
     print " "
