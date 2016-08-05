@@ -27,11 +27,8 @@ import javax.swing.Action;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.python.util.jython;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
-import org.python.core.PyObject;
-import org.python.util.PythonInterpreter;
 import org.zendesk.client.v2.Zendesk;
 import org.zendesk.client.v2.model.CustomFieldValue;
 import org.zendesk.client.v2.model.Ticket;
@@ -46,7 +43,6 @@ import com.amazonservices.mws.orders._2013_09_01.model.ListOrderItemsResponse;
 import com.amazonservices.mws.orders._2013_09_01.model.ResponseHeaderMetadata;
 
 import java.awt.Color;
-import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JScrollPane;
@@ -55,7 +51,7 @@ import javax.swing.JScrollPane;
 public class OrderTool2 extends JFrame {
 
 	private JPanel contentPane;
-	private JTextArea logArea; 
+	private static JTextArea logArea; 
 	private JTextField orderField;
 	private JTextField skuField;
 	private JTextField asinField;
@@ -92,6 +88,7 @@ public class OrderTool2 extends JFrame {
 	private String fulChannel;
 	private String channel;
 	private String email;
+	private String ssku;
 	private JTextField dateField;
 	private final Action action_3 = new SwingAction_3();
 	private JTextField ticketNField;
@@ -106,15 +103,16 @@ public class OrderTool2 extends JFrame {
 	private JTextField idInputField;
 	private JTextField ffField;
 	private JTextField channelField;
-	private JTextField textField;
-	
-	private final String sellerId = "ANK8P1OMW3VD1";
+	private JTextField sskuField;
 	private JTextField emailField;
+	
+	private String sellerId;
+	
 
 	/**
 	 * Launch the application.
 	 */
-	
+	/*
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -127,7 +125,7 @@ public class OrderTool2 extends JFrame {
 			}
 		});
 	}
-	
+	*/
 	/**
 	 * Create the frame.
 	 */
@@ -221,10 +219,15 @@ public class OrderTool2 extends JFrame {
 		        	src1.setCharacterStream(new StringReader(itemInfo));
 		        	Document doc1 = builder1.parse(src1);
 					sku = doc1.getElementsByTagName("SellerSKU").item(0).getTextContent();
-					sku = sku.substring(0, sku.indexOf("_"));
-					if (mapSKU(sku)=="") {
-						
-					}
+					int underline = sku.indexOf("_");
+					if (underline != -1) 
+						sku = sku.substring(0, sku.indexOf("_"));
+					String mapSku = mapSKU(sku);
+					if (mapSku !="") 
+						ssku = mapSku;
+					else
+						ssku = "";
+					
 					asin = doc1.getElementsByTagName("ASIN").item(0).getTextContent();
 					//refund = 
 					product = doc1.getElementsByTagName("Title").item(0).getTextContent();
@@ -248,6 +251,7 @@ public class OrderTool2 extends JFrame {
 					ffField.setText(fulChannel);
 					channelField.setText(channel);
 					emailField.setText(email);
+					sskuField.setText(ssku);
 					
 					// set the font color based on refund total
 //					if (refund.equals("$0.00"))
@@ -697,6 +701,19 @@ public class OrderTool2 extends JFrame {
 		contentPane.add(lblFullfillment);
 		
 		ffField = new JTextField();
+		ffField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					ffField.selectAll();
+					String sltext = ffField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Fullfilled Channel has been copied to clipboard.\n");
+				}
+			}
+		});
 		ffField.setColumns(10);
 		ffField.setBounds(123, 324, 202, 20);
 		contentPane.add(ffField);
@@ -706,6 +723,19 @@ public class OrderTool2 extends JFrame {
 		contentPane.add(lblChannel);
 		
 		channelField = new JTextField();
+		channelField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					channelField.selectAll();
+					String sltext = channelField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Channel has been copied to clipboard.\n");
+				}
+			}
+		});
 		channelField.setColumns(10);
 		channelField.setBounds(123, 355, 202, 20);
 		contentPane.add(channelField);
@@ -714,16 +744,42 @@ public class OrderTool2 extends JFrame {
 		lblStandardSku.setBounds(15, 385, 108, 14);
 		contentPane.add(lblStandardSku);
 		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(123, 382, 202, 20);
-		contentPane.add(textField);
+		sskuField = new JTextField();
+		sskuField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					sskuField.selectAll();
+					String sltext = sskuField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Standard SKU has been copied to clipboard.\n");
+				}
+			}
+		});
+		sskuField.setColumns(10);
+		sskuField.setBounds(123, 382, 202, 20);
+		contentPane.add(sskuField);
 		
 		JLabel lblEmail = new JLabel("Email");
 		lblEmail.setBounds(362, 385, 74, 14);
 		contentPane.add(lblEmail);
 		
 		emailField = new JTextField();
+		emailField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					emailField.selectAll();
+					String sltext = emailField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Customer email has been copied to clipboard.\n");
+				}
+			}
+		});
 		emailField.setColumns(10);
 		emailField.setBounds(462, 379, 270, 20);
 		contentPane.add(emailField);
@@ -821,6 +877,7 @@ public class OrderTool2 extends JFrame {
 			ffField.setText("");
 			channelField.setText("");
 			emailField.setText("");
+			sskuField.setText("");
 			
 			idInputField.setText("");
 		}
@@ -960,19 +1017,20 @@ public class OrderTool2 extends JFrame {
             throw ex;
         }
     }
+	
 	public static String mapSKU (String amzSku) {
 		String stdSku = "";
 		try {
 		String file = "mappingSKU";
-		if (checkMD5(file + ".csv")) {
+		if (!checkMD5(file + ".csv")) {
 			loadMappingSku(file + ".csv");
 		}
 		FileReader reader = new FileReader(file+".json");
-		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);	
 		stdSku = (String) jsonData.get(amzSku);
 		
 		} catch (Exception e1) {
-			e1.getMessage();
+			logArea.append(LocalDateTime.now().toString() + ":" + e1.getMessage() + "\n");
 		}
 		
 		return stdSku;
@@ -980,7 +1038,24 @@ public class OrderTool2 extends JFrame {
 	
 	public static boolean checkMD5(String file) {
 		boolean flag = true;
-		// TODO
+		try {
+		File theFile = new File(file);
+		FileReader reader = new FileReader("md5");
+		BufferedReader in = new BufferedReader(reader);
+		String md5 = in.readLine();
+		//Use MD5 algorithm
+		MessageDigest md5Digest = MessageDigest.getInstance("MD5");
+		 
+		//Get the checksum
+		String checksum = getMD5(md5Digest, theFile);
+		if (!checksum.equals(md5)) 
+			flag = false;
+		in.close();
+		reader.close();
+		}
+		catch (Exception e) {
+			logArea.append(LocalDateTime.now().toString() + ":" + e.getMessage() + "\n");
+		}
 		return flag;
 	}
 	
@@ -1009,13 +1084,37 @@ public class OrderTool2 extends JFrame {
 	    {
 	        sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
 	    }
-	     
+	    String filePath = "md5";
+		BufferedWriter out = new BufferedWriter(new FileWriter(filePath));
+		out.write(sb.toString());
+		out.flush();
+		out.close();
 	    //return complete hash
-	   return sb.toString();
+	    return sb.toString();
 	}
 	
 	public static void loadMappingSku(String file) {
-		// TODO
+		try {
+			FileReader reader = new FileReader(file);
+			BufferedReader in = new BufferedReader(reader);
+			String line = "";
+			String filePath = file.substring(0,file.indexOf(".")) + ".json";
+			BufferedWriter out = new BufferedWriter(new FileWriter(filePath));
+			JSONObject obj = new JSONObject();
+			
+			while((line = in.readLine()) != null) {
+				String value = line.substring(0, line.indexOf(","));
+				String key = line.substring(line.indexOf(",")+1);
+				obj.putIfAbsent(key, value);			
+			}
+			in.close();
+			out.write(obj.toJSONString());
+			out.flush();
+			out.close();
+			}
+			catch (Exception e) {
+				logArea.append(LocalDateTime.now().toString() + ":" + e.getMessage() + "\n");
+			}
 	}
 	
 	public static boolean isFileExsit(String file) {
@@ -1026,5 +1125,9 @@ public class OrderTool2 extends JFrame {
 		else {
 			return false;
 		}
+	}
+	
+	public void setSellerID (String sellid) {
+		sellerId = sellid;
 	}
 }

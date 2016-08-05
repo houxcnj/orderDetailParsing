@@ -46,6 +46,7 @@ public class Config extends JDialog {
 	private String loginID;
 	private String passwd;
 	private String brand;
+	private String sellerID;
 	
 	/**
 	 * Launch the application.
@@ -65,10 +66,11 @@ public class Config extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Config(String id, String pass, String bd) {
+	public Config(String id, String pass, String bd, String sellid) {
 		loginID = id;
 		passwd = pass;
 		brand = bd;
+		sellerID = sellid;
 		
 		setBounds(100, 100, 522, 394);
 		getContentPane().setLayout(new BorderLayout());
@@ -261,32 +263,33 @@ public class Config extends JDialog {
 				BufferedWriter out = new BufferedWriter(new FileWriter(filePath));
 				JSONObject obj = new JSONObject();
 				
-			obj.put("orderID", Integer.parseInt(txtOrderid.getText()));
-			obj.put("fullName", Integer.parseInt(txtName.getText()));
-			obj.put("address1", Integer.parseInt(txtAddress.getText()));
-			obj.put("address2", Integer.parseInt(txtAddress_1.getText()));
-			obj.put("city", Integer.parseInt(txtCity.getText()));
-			obj.put("state", Integer.parseInt(txtState.getText()));
-			obj.put("country", Integer.parseInt(txtCountry.getText()));
-			obj.put("zipcode1", Integer.parseInt(txtZip.getText()));
-			obj.put("zipcode2", Integer.parseInt(txtZip_1.getText()));
-			obj.put("product", Integer.parseInt(txtProduct.getText()));
-			obj.put("asin", Integer.parseInt(txtAsin.getText()));
-			obj.put("sku", Integer.parseInt(txtSku.getText()));
-			obj.put("purchase_date", Integer.parseInt(txtPurchaseDate.getText()));
-			obj.put("refund", Integer.parseInt(txtRefund.getText()));
-			obj.put("phone", Integer.parseInt(txtPhone.getText()));
+			obj.putIfAbsent("orderID", Integer.parseInt(txtOrderid.getText()));
+			obj.putIfAbsent("fullName", Integer.parseInt(txtName.getText()));
+			obj.putIfAbsent("address1", Integer.parseInt(txtAddress.getText()));
+			obj.putIfAbsent("address2", Integer.parseInt(txtAddress_1.getText()));
+			obj.putIfAbsent("city", Integer.parseInt(txtCity.getText()));
+			obj.putIfAbsent("state", Integer.parseInt(txtState.getText()));
+			obj.putIfAbsent("country", Integer.parseInt(txtCountry.getText()));
+			obj.putIfAbsent("zipcode1", Integer.parseInt(txtZip.getText()));
+			obj.putIfAbsent("zipcode2", Integer.parseInt(txtZip_1.getText()));
+			obj.putIfAbsent("product", Integer.parseInt(txtProduct.getText()));
+			obj.putIfAbsent("asin", Integer.parseInt(txtAsin.getText()));
+			obj.putIfAbsent("sku", Integer.parseInt(txtSku.getText()));
+			obj.putIfAbsent("purchase_date", Integer.parseInt(txtPurchaseDate.getText()));
+			obj.putIfAbsent("refund", Integer.parseInt(txtRefund.getText()));
+			obj.putIfAbsent("phone", Integer.parseInt(txtPhone.getText()));
 			
 			out.write(obj.toJSONString());
 			out.flush();
 			out.close();
 			
 			JOptionPane.showMessageDialog(null, "Done!");
-			OrderTool tool = new OrderTool();
+			OrderTool2 tool = new OrderTool2();
 			tool.setVisible(true);
 			tool.setLoginID(loginID);
 			tool.setPassword(passwd);
 			tool.setBrand(brand);
+			tool.setSellerID(sellerID);
 			dispose();
 				}
 			}

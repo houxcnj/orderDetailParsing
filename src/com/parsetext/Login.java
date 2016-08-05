@@ -47,6 +47,7 @@ public class Login extends JFrame {
 	private String brand;
 	private JTextField brandField;
 	private final Action action_2 = new SwingAction_2();
+	private String sellerID;
 
 	/**
 	 * Launch the application.
@@ -162,7 +163,15 @@ public class Login extends JFrame {
 			loginID = idField.getText();
 			passwd = new String(passField.getPassword());
 			brand = brandField.getText();
+			
 			try {
+				FileReader reader = new FileReader("MWSKey.txt");
+				BufferedReader in = new BufferedReader(reader);
+				String line = in.readLine();
+				line = in.readLine();
+				sellerID = line.substring(line.indexOf("\t")+1);
+				in.close();
+				
 				String support = brand +".zendesk.com";
 				Zendesk zd = new Zendesk.Builder("https://" + support)
 						.setUsername(loginID).setPassword(passwd)
@@ -172,7 +181,7 @@ public class Login extends JFrame {
 				zd.close();
 				txtpnInfo.append("\nLogin successful");
 				if (!isThisPerson()) {
-					Config cfid = new Config(loginID, passwd, brand);
+					Config cfid = new Config(loginID, passwd, brand, sellerID);
 					/*
 					cfid.setLoginID(loginID);
 					cfid.setPassword(passwd);
@@ -181,20 +190,27 @@ public class Login extends JFrame {
 					cfid.setLocationRelativeTo(null);
 					cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					cfid.setVisible(true);
+					dispose();
 				}
 				else {
-				OrderTool tool = new OrderTool();
+				OrderTool2 tool = new OrderTool2();
 				tool.setVisible(true);
 				tool.setLoginID(loginID);
 				tool.setPassword(passwd);
 				tool.setBrand(brand);
+				tool.setSellerID(sellerID);
 				tool.setLocationRelativeTo(null);
 				dispose();
 				}
 			} catch (Exception e1) {
 				System.out.println(e1.getMessage());
-				txtpnInfo.append("\nPlease check your ID and Password!");
-				
+				if (e1.getMessage().equals("HTTP/401: Unauthorized"))
+					txtpnInfo.append("Please check your user name and password!\n");
+				else if (e1.getMessage().equals("HTTP/404: Not Found"))
+					txtpnInfo.append("Please check your brand name!\n");
+				else
+					txtpnInfo.append(e1.getMessage()+"\n");
+				// txtpnInfo.append("\nPlease also check your MWSkey file!");
 			}
 			
 		}
@@ -284,6 +300,13 @@ public class Login extends JFrame {
 			passwd = new String(passField.getPassword());
 			brand = brandField.getText();
 			try {
+				FileReader reader = new FileReader("MWSKey.txt");
+				BufferedReader in = new BufferedReader(reader);
+				String line = in.readLine();
+				line = in.readLine();
+				sellerID = line.substring(line.indexOf("\t")+1);
+				in.close();
+				
 				String support = brand +".zendesk.com";
 				Zendesk zd = new Zendesk.Builder("https://" + support)
 						.setUsername(loginID).setPassword(passwd)
@@ -291,7 +314,7 @@ public class Login extends JFrame {
 				zd.getTickets().iterator().hasNext();
 				zd.close();
 			if (isThisPerson()) {
-				Config cfid = new Config(loginID, passwd, brand);
+				Config cfid = new Config(loginID, passwd, brand, sellerID);
 				/*
 				cfid.setLoginID(loginID);
 				cfid.setPassword(passwd);
@@ -300,16 +323,17 @@ public class Login extends JFrame {
 				cfid.setLocationRelativeTo(null);
 				cfid.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 				cfid.setVisible(true);
+				dispose();
 			}
 			else {
-				txtpnInfo.append("\nPlease check your ID if you login before! Otherwise just login!");
+				txtpnInfo.append("Please check your ID if you login before! Otherwise just login!\n");
 			}
 			
 			}
 			catch (Exception e1)
 			{
 				System.out.println(e1.getMessage());
-				txtpnInfo.append("\nPlease check your ID or Password!");
+				txtpnInfo.append("Please check your ID or Password!\n");
 			}
 		}
 	}
