@@ -1,5 +1,6 @@
 package com.parsetext;
 import java.io.*;
+import java.security.MessageDigest;
 import java.time.LocalDateTime;
 
 import javax.swing.JFrame;
@@ -101,7 +102,7 @@ public class OrderTool2 extends JFrame {
 	private String passwd;
 	private String brand;
 	
-	private JSONObject fieldData;
+	private static JSONObject fieldData;
 	private JTextField idInputField;
 	private JTextField ffField;
 	private JTextField channelField;
@@ -220,6 +221,10 @@ public class OrderTool2 extends JFrame {
 		        	src1.setCharacterStream(new StringReader(itemInfo));
 		        	Document doc1 = builder1.parse(src1);
 					sku = doc1.getElementsByTagName("SellerSKU").item(0).getTextContent();
+					sku = sku.substring(0, sku.indexOf("_"));
+					if (mapSKU(sku)=="") {
+						
+					}
 					asin = doc1.getElementsByTagName("ASIN").item(0).getTextContent();
 					//refund = 
 					product = doc1.getElementsByTagName("Title").item(0).getTextContent();
@@ -678,6 +683,11 @@ public class OrderTool2 extends JFrame {
 		contentPane.add(btnRestore);
 		
 		idInputField = new JTextField();
+		idInputField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+			}
+		});
 		idInputField.setBounds(10, 103, 235, 20);
 		contentPane.add(idInputField);
 		idInputField.setColumns(10);
@@ -778,7 +788,7 @@ public class OrderTool2 extends JFrame {
 		}
 	}
 	// add valid field
-	public List<CustomFieldValue> addValidField (List<CustomFieldValue> cfv, String attr, String value) {
+	public static List<CustomFieldValue> addValidField (List<CustomFieldValue> cfv, String attr, String value) {
 		long fieldID = (long) fieldData.get(attr);
 		if (fieldID != 0) {
 			CustomFieldValue c1 = new CustomFieldValue(fieldID, value);
@@ -891,7 +901,7 @@ public class OrderTool2 extends JFrame {
 		brand = bd;
 	}
 	
-	public String invokeGetOrder(
+	public static String invokeGetOrder(
             MarketplaceWebServiceOrders client, 
             GetOrderRequest request) {
         try {
@@ -921,7 +931,7 @@ public class OrderTool2 extends JFrame {
         }
     }
 	
-	public String invokeListOrderItems(
+	public static String invokeListOrderItems(
             MarketplaceWebServiceOrders client, 
             ListOrderItemsRequest request) {
         try {
@@ -950,4 +960,71 @@ public class OrderTool2 extends JFrame {
             throw ex;
         }
     }
+	public static String mapSKU (String amzSku) {
+		String stdSku = "";
+		try {
+		String file = "mappingSKU";
+		if (checkMD5(file + ".csv")) {
+			loadMappingSku(file + ".csv");
+		}
+		FileReader reader = new FileReader(file+".json");
+		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+		stdSku = (String) jsonData.get(amzSku);
+		
+		} catch (Exception e1) {
+			e1.getMessage();
+		}
+		
+		return stdSku;
+	}
+	
+	public static boolean checkMD5(String file) {
+		boolean flag = true;
+		// TODO
+		return flag;
+	}
+	
+	public static String getMD5(MessageDigest digest, File file) throws IOException {
+		FileInputStream fis = new FileInputStream(file);
+	     
+	    //Create byte array to read data in chunks
+	    byte[] byteArray = new byte[1024];
+	    int bytesCount = 0; 
+	      
+	    //Read file data and update in message digest
+	    while ((bytesCount = fis.read(byteArray)) != -1) {
+	        digest.update(byteArray, 0, bytesCount);
+	    };
+	     
+	    //close the stream; We don't need it now.
+	    fis.close();
+	     
+	    //Get the hash's bytes
+	    byte[] bytes = digest.digest();
+	     
+	    //This bytes[] has bytes in decimal format;
+	    //Convert it to hexadecimal format
+	    StringBuilder sb = new StringBuilder();
+	    for(int i=0; i< bytes.length ;i++)
+	    {
+	        sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+	    }
+	     
+	    //return complete hash
+	   return sb.toString();
+	}
+	
+	public static void loadMappingSku(String file) {
+		// TODO
+	}
+	
+	public static boolean isFileExsit(String file) {
+		File f = new File(file);
+		if(f.exists() && !f.isDirectory()) { 
+		    return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
