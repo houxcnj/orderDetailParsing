@@ -222,11 +222,10 @@ public class OrderTool2 extends JFrame {
 					int underline = sku.indexOf("_");
 					if (underline != -1) 
 						sku = sku.substring(0, sku.indexOf("_"));
-					String mapSku = mapSKU(sku);
-					if (mapSku !="") 
-						ssku = mapSku;
+					if (isStdSKU(sku))
+						ssku = sku;
 					else
-						ssku = "";
+						ssku = mapSKU(sku);
 					
 					asin = doc1.getElementsByTagName("ASIN").item(0).getTextContent();
 					//refund = 
@@ -260,9 +259,13 @@ public class OrderTool2 extends JFrame {
 //						refundField.setForeground(Color.RED);
 					
 					logArea.append(LocalDateTime.now().toString() + ": Process Done!\n");
+		        	
+		        		
+		        		
 				}
 				catch (Exception e1) {
 					System.out.println(e1.getMessage());
+					logArea.append(LocalDateTime.now().toString() + ": Invalid Order ID\n");
 				}
 					
 			}
@@ -895,7 +898,7 @@ public class OrderTool2 extends JFrame {
 					JOptionPane.YES_NO_OPTION);
 			if (selectedOption == JOptionPane.YES_OPTION) {
 				try {
-					String logfile = LocalDateTime.now().toString().replaceAll(":", "") +"log";
+					String logfile = LocalDateTime.now().toString().replaceAll(":", "") +".log";
 					BufferedWriter out = new BufferedWriter(new FileWriter(logfile));
 					out.write(logArea.getText());
 					out.flush();
@@ -915,9 +918,12 @@ public class OrderTool2 extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Export data to row");
 		}
 		public void actionPerformed(ActionEvent e) {
-			String outRow = "\t" + orderID + "\t\t\t\t" + sku + "\t\t\t" + fullName +"\t\t" + address1 + "\t" + address2 + "\t" + city + "\t" + state +"\t" + zipcode1 + "\tUS\t\t" + phone;
+			String outRow = "";
+			if (!ssku.equals(ssku)) 
+			outRow = "\t" + orderID + "\t\t\t\t" + ssku + "\t\t\t" + fullName +"\t\t" + address1 + "\t" + address2 + "\t" + city + "\t" + state +"\t" + zipcode1 + "\tUS\t\t" + phone;
+			else
+				outRow = "\t" + orderID + "\t\t\t\t" + sku + "\t\t\t" + fullName +"\t\t" + address1 + "\t" + address2 + "\t" + city + "\t" + state +"\t" + zipcode1 + "\tUS\t\t" + phone;
 			replaceStdField.setText(outRow);
-			
 		}
 	}
 	private class SwingAction_4 extends AbstractAction {
@@ -1026,14 +1032,33 @@ public class OrderTool2 extends JFrame {
 			loadMappingSku(file + ".csv");
 		}
 		FileReader reader = new FileReader(file+".json");
-		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);	
-		stdSku = (String) jsonData.get(amzSku);
+		JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+		if (jsonData.containsKey(amzSku))
+			stdSku = (String) jsonData.get(amzSku);
+		else if (jsonData.containsKey(amzSku+"-F"))
+			stdSku = (String) jsonData.get(amzSku+"-F");
+		else if (jsonData.containsKey(amzSku+"-FBA"))
+			stdSku = (String) jsonData.get(amzSku+"-FBA");
 		
 		} catch (Exception e1) {
 			logArea.append(LocalDateTime.now().toString() + ":" + e1.getMessage() + "\n");
 		}
 		
 		return stdSku;
+	}
+	
+	public static boolean isStdSKU (String amzSku) {
+		boolean flag = false;
+		try {
+			FileReader reader = new FileReader("mappingSKU.json");
+			JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+			if (jsonData.containsValue(amzSku))
+				flag = true;
+		}
+		catch (Exception e) {
+			logArea.append(LocalDateTime.now().toString() + ":" + e.getMessage() + "\n");
+		}
+		return flag;
 	}
 	
 	public static boolean checkMD5(String file) {
@@ -1105,7 +1130,7 @@ public class OrderTool2 extends JFrame {
 			while((line = in.readLine()) != null) {
 				String value = line.substring(0, line.indexOf(","));
 				String key = line.substring(line.indexOf(",")+1);
-				obj.putIfAbsent(key, value);			
+				obj.putIfAbsent(key, value);
 			}
 			in.close();
 			out.write(obj.toJSONString());
