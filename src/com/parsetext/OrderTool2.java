@@ -25,6 +25,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.w3c.dom.Document;
@@ -107,6 +108,8 @@ public class OrderTool2 extends JFrame {
 	private JTextField emailField;
 	
 	private String sellerId;
+	private JTextField crField;
+	private JTextField trackField;
 	
 
 	/**
@@ -231,7 +234,18 @@ public class OrderTool2 extends JFrame {
 					//refund = 
 					product = doc1.getElementsByTagName("Title").item(0).getTextContent();
 					
-					
+					try {
+					FileReader reader = new FileReader("tracking.json");
+					JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+					JSONArray jArray = (JSONArray) jsonData.get(orderID);
+					crField.setText((String) jArray.toArray()[0]);
+					trackField.setText((String) jArray.toArray()[1]);
+					reader.close();
+					}
+					catch (Exception e4) {
+						System.out.println(e4.getMessage());
+						logArea.append(LocalDateTime.now().toString() + ": No Tracking Information!\n");
+					}
 					// fill value to the appropriate field 
 					orderField.setText(orderID);
 					skuField.setText(sku);
@@ -251,6 +265,7 @@ public class OrderTool2 extends JFrame {
 					channelField.setText(channel);
 					emailField.setText(email);
 					sskuField.setText(ssku);
+					
 					
 					// set the font color based on refund total
 //					if (refund.equals("$0.00"))
@@ -786,6 +801,50 @@ public class OrderTool2 extends JFrame {
 		emailField.setColumns(10);
 		emailField.setBounds(462, 379, 270, 20);
 		contentPane.add(emailField);
+		
+		JLabel lblCarrier = new JLabel("Carrier");
+		lblCarrier.setBounds(15, 413, 108, 14);
+		contentPane.add(lblCarrier);
+		
+		crField = new JTextField();
+		crField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					crField.selectAll();
+					String sltext = crField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Carrier Information has been copied to clipboard.\n");
+				}
+			}
+		});
+		crField.setColumns(10);
+		crField.setBounds(123, 410, 202, 20);
+		contentPane.add(crField);
+		
+		JLabel lblTracking = new JLabel("Tracking #");
+		lblTracking.setBounds(15, 441, 108, 14);
+		contentPane.add(lblTracking);
+		
+		trackField = new JTextField();
+		trackField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+					trackField.selectAll();
+					String sltext = trackField.getSelectedText();
+					StringSelection data = new StringSelection(sltext);
+					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+					clipboard.setContents(data, data);
+					logArea.append(LocalDateTime.now().toString() + ": Tracking number has been copied to clipboard.\n");
+				}
+			}
+		});
+		trackField.setColumns(10);
+		trackField.setBounds(123, 438, 202, 20);
+		contentPane.add(trackField);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -881,6 +940,8 @@ public class OrderTool2 extends JFrame {
 			channelField.setText("");
 			emailField.setText("");
 			sskuField.setText("");
+			crField.setText("");
+			trackField.setText("");
 			
 			idInputField.setText("");
 		}
