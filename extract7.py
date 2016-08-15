@@ -26,7 +26,9 @@ def toJson():
 
 def extractAll():
 	res = {}
-	trackingDir =  os.path.join(os.path.dirname(__file__), 'tracking\\')
+	dir_ = os.path.dirname(__file__)
+	dir_ = os.path.abspath(os.path.join(dir_, os.pardir))
+	trackingDir =  os.path.join(dir_ , 'Access\\')
 	for file in os.listdir(trackingDir):
 		if file.endswith(".txt"):
 			res.update(extractTracking(trackingDir+file))
