@@ -17,15 +17,19 @@ import javax.swing.JDialog;
 
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.awt.event.ActionEvent;
+
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JPasswordField;
@@ -48,6 +52,8 @@ public class Login extends JFrame {
 	private JTextField brandField;
 	private final Action action_2 = new SwingAction_2();
 	private String sellerID;
+	
+
 
 	/**
 	 * Launch the application.
@@ -165,12 +171,54 @@ public class Login extends JFrame {
 			brand = brandField.getText();
 			
 			try {
-				FileReader reader = new FileReader("MWSKey.txt");
+				FileReader reader = new FileReader("MWSkey.txt");
 				BufferedReader in = new BufferedReader(reader);
 				String line = in.readLine();
-				line = in.readLine();
-				sellerID = line.substring(line.indexOf("\t")+1);
+				// line = in.readLine();
+				String line1 = "";
+				if (isFileExsit("myKey.txt")) {
+				FileReader reader1 = new FileReader("myKey.txt");
+				BufferedReader in1 = new BufferedReader(reader1);
+				line1 = in1.readLine();
+				in1.close();
+				}
+				String line1sha1 = DigestUtils.sha1Hex(line1);
+				if (line1sha1.equals(line)) { 
+				sellerID = line1; //line.substring(line.indexOf("\t")+1);
 				in.close();
+				}
+				else if (line.startsWith("unu")) {
+					
+					line = in.readLine();
+					String sellid = line.substring(line.indexOf("\t")+1);
+									
+					while ((line = in.readLine()).indexOf("AWS") == -1) ;
+	            	String s2 = line.substring(line.indexOf("\t")+1);
+	            	line = in.readLine();
+	            	String s3 = line.substring(line.indexOf("\t")+1);
+					
+					in.close();
+					
+					String outline = rot13(sellid);   
+					
+					BufferedWriter out = new BufferedWriter(new FileWriter("mykey.txt"));
+					out.write(outline);
+					out.newLine();
+					outline = rot13(s2);
+					out.write(outline);
+					out.newLine();
+					outline = rot13(s3);
+					out.write(outline);
+					out.close();
+					
+					BufferedWriter out1 = new BufferedWriter(new FileWriter("MWSkey.txt"));
+					out1.write(DigestUtils.sha1Hex(rot13(sellid)));
+					out1.close();
+					sellerID = rot13(sellid);
+				}
+				else {
+					txtpnInfo.append("Please contact your supervisor about the amazon key!\n");
+				}
 				
 				String support = brand +".zendesk.com";
 				Zendesk zd = new Zendesk.Builder("https://" + support)
@@ -337,4 +385,30 @@ public class Login extends JFrame {
 			}
 		}
 	}
+	
+	public static boolean isFileExsit(String file) {
+		File f = new File(file);
+		if(f.exists() && !f.isDirectory()) { 
+		    return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public String rot13(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if       (c >= 'a' && c <= 'm') c += 13;
+            else if  (c >= 'A' && c <= 'M') c += 13;
+            else if  (c >= 'n' && c <= 'z') c -= 13;
+            else if  (c >= 'N' && c <= 'Z') c -= 13;
+            System.out.print(c);
+            result += c;
+        }
+        
+        return result;
+    }
+	
 }

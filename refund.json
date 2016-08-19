@@ -1,0 +1,3478 @@
+{
+  "110-6375457-9025865": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-3119742-3618604": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Shipping": "3.99", 
+    "Principal": "-19.99"
+  }, 
+  "112-6099228-0668233": {
+    "Commission": "5.40", 
+    "RestockingFee": "7.20", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "105-8725176-8371435": {
+    "ShippingChargeback": "9.98", 
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Shipping": "-9.98", 
+    "Principal": "-45.99"
+  }, 
+  "103-5714701-1201036": {
+    "Commission": "5.55", 
+    "Tax": "-3.70", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "109-3204602-7841868": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Shipping": "1.97", 
+    "Principal": "-29.99"
+  }, 
+  "104-3498642-3076251": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Shipping": "1.50", 
+    "Principal": "-7.99"
+  }, 
+  "112-6649776-7156237": {
+    "Commission": "8.40", 
+    "RefundCommission": "-1.68", 
+    "Principal": "-55.99"
+  }, 
+  "110-7386978-9335447": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-5.99", 
+    "Principal": "-32.99"
+  }, 
+  "113-0603896-0729832": {
+    "Goodwill": "-2.40"
+  }, 
+  "108-7323305-2258651": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "109-5614904-2674616": {
+    "Commission": "1.67", 
+    "Tax": "-1.11", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "108-9353028-3765037": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "110-1877914-4020211": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "107-6855684-4457060": {
+    "Commission": "8.40", 
+    "Tax": "-5.60", 
+    "RefundCommission": "-1.68", 
+    "Principal": "-55.99"
+  }, 
+  "105-6120009-6345044": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "109-8881250-7869862": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "103-8490773-7353816": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "1.50", 
+    "Principal": "-49.99"
+  }, 
+  "106-9835710-1990612": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.99", 
+    "Principal": "-32.99"
+  }, 
+  "104-9963397-2970646": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.59"
+  }, 
+  "109-2038272-6824202": {
+    "RestockingFee": "6.00", 
+    "ShippingChargeback": "3.99", 
+    "Shipping": "-3.99", 
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "103-6475703-1141849": {
+    "Commission": "5.55", 
+    "Tax": "-3.70", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "5.99", 
+    "Principal": "23.00"
+  }, 
+  "107-0208257-7917862": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-9030916-1464269": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-5.99", 
+    "Principal": "-31.99"
+  }, 
+  "114-8241443-1098609": {
+    "Commission": "2.98", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.90"
+  }, 
+  "114-7011665-3265866": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "3.00", 
+    "Principal": "-32.99"
+  }, 
+  "105-8502966-8804227": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "110-7002817-4387437": {
+    "Commission": "7.50", 
+    "RestockingFee": "10.00", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "115-4637161-6703430": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "002-0408048-8601051": {
+    "Goodwill": "-8.18"
+  }, 
+  "109-8523286-6746614": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "107-7145236-6309036": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "-3.99", 
+    "Principal": "-49.99"
+  }, 
+  "107-4703586-6405027": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "103-2602584-9963456": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "113-4812428-4903459": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "104-4615833-0823421": {
+    "ShippingChargeback": "6.18", 
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "-6.18", 
+    "Principal": "-49.99"
+  }, 
+  "115-7252902-1508240": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "5.99", 
+    "Principal": "-39.99"
+  }, 
+  "112-4701415-8517806": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-9485955-0466626": {
+    "Goodwill": "-10.50"
+  }, 
+  "114-0185003-5706621": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "110-8556886-0425034": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "002-0730221-9015417": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "113-6803980-2432243": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "104-4369452-8680257": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "113-9622767-7318655": {
+    "Commission": "1.95", 
+    "RefundCommission": "-0.39", 
+    "Principal": "5.00"
+  }, 
+  "112-8061769-4226614": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "102-6494031-8535429": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-0141997-0070601": {
+    "Commission": "1.19", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "113-8308188-0924224": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "112-1283272-4164210": {
+    "ShippingChargeback": "1.81", 
+    "Shipping": "-1.81"
+  }, 
+  "102-5430371-2751446": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "116-6250463-2385862": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "114-9725467-9083466": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "110-4071150-7949812": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-2395696-9229011": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "102-9907287-0142663": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-5109084-2097824": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "112-8379673-1309063": {
+    "Commission": "2.70", 
+    "RefundCommission": "-0.54", 
+    "Principal": "-17.99"
+  }, 
+  "105-9779287-3496246": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "111-0412101-0444237": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-6744271-7873003": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "108-9505466-6631418": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "102-3994812-0668229": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "112-0066411-4025076": {
+    "Commission": "3.34", 
+    "RefundCommission": "-0.67", 
+    "Principal": "-22.26"
+  }, 
+  "107-1452786-3923467": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-6.25", 
+    "Principal": "-32.99"
+  }, 
+  "002-7355242-1633816": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "108-8451260-9442637": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "107-3091072-7976248": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "-14.99"
+  }, 
+  "110-1956862-1961041": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "107-1717688-4081865": {
+    "Commission": "1.05", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "111-0349411-3882654": {
+    "Commission": "6.90", 
+    "Tax": "-4.60", 
+    "RefundCommission": "-1.38", 
+    "Principal": "-45.99"
+  }, 
+  "104-9942629-3664245": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "105-6645237-6581861": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "106-8541481-2803423": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "114-7753959-0364206": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "102-6281221-6073849": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "108-0759578-9884201": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "002-5395272-3093830": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "104-7206823-8077068": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "109-5503734-5874622": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "111-9357097-4733027": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "107-7140373-0897039": {
+    "Commission": "11.70", 
+    "RefundCommission": "-2.34", 
+    "Principal": "-77.98"
+  }, 
+  "104-5556316-2713863": {
+    "Commission": "1.35", 
+    "Tax": "-0.90", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "102-7715780-3630625": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "103-7096874-5568247": {
+    "Commission": "5.40", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "111-9277273-1749813": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "107-1307382-0381808": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "115-5553064-9633017": {
+    "Commission": "1.00", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "116-8700438-8348261": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "113-0036888-2113836": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "102-4087372-7203434": {
+    "ShippingChargeback": "5.99", 
+    "ShippingTax": "-0.60", 
+    "Shipping": "-5.99"
+  }, 
+  "110-4000493-6956250": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "110-2090364-0113050": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "112-0410035-0596241": {
+    "ShippingChargeback": "3.43", 
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Shipping": "-3.43", 
+    "Principal": "-10.50"
+  }, 
+  "108-1301189-8685827": {
+    "Commission": "1.34", 
+    "Tax": "-0.90", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.95"
+  }, 
+  "104-7304946-0361836": {
+    "Commission": "1.34", 
+    "Tax": "-0.90", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.95"
+  }, 
+  "104-7352212-2192212": {
+    "Commission": "1.49", 
+    "Tax": "-1.00", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "109-6300587-6017015": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "111-2008627-4918602": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "113-9320032-2769861": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "107-0702267-1093828": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "109-4240662-6232235": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "2.99", 
+    "Principal": "23.00"
+  }, 
+  "106-9142824-6937000": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "116-1837159-9855446": {
+    "Commission": "2.33", 
+    "RefundCommission": "-0.47", 
+    "Principal": "-15.50"
+  }, 
+  "106-8170219-5736239": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "104-0421546-0302634": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "002-4146379-2094618": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "102-6914953-2277804": {
+    "Commission": "2.10", 
+    "RefundCommission": "-0.42", 
+    "Shipping": "2.00", 
+    "Principal": "-13.99"
+  }, 
+  "106-0966230-1651405": {
+    "ShippingChargeback": "4.55", 
+    "Commission": "3.40", 
+    "RefundCommission": "-0.68", 
+    "Shipping": "-4.55", 
+    "Principal": "-22.66"
+  }, 
+  "108-9818822-9572239": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "106-8014985-4626656": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "002-1535047-7529040": {
+    "Commission": "4.50", 
+    "RestockingFee": "6.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "109-3137357-1101831": {
+    "Commission": "1.19", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "106-0626177-3753029": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "114-4782636-2108227": {
+    "Commission": "1.49", 
+    "Tax": "-1.00", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "115-2169805-0993831": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "002-7035726-4925830": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "002-5214546-4088204": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "104-5468797-9940263": {
+    "Commission": "2.74", 
+    "RefundCommission": "-0.55", 
+    "Principal": "-18.25"
+  }, 
+  "114-7636300-7775435": {
+    "Commission": "1.50", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.99"
+  }, 
+  "116-7325941-0101033": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "102-9292421-1547454": {
+    "Commission": "1.50", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.99"
+  }, 
+  "113-5630431-9478642": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "107-4248680-7838630": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "115-5291553-0653850": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "106-6600315-2841859": {
+    "Commission": "3.74", 
+    "RefundCommission": "-0.75", 
+    "Principal": "-24.88"
+  }, 
+  "116-1881270-7898656": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-5532947-9269019": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "103-7855513-8499439": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-7438804-3065846": {
+    "ShippingChargeback": "6.29", 
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Shipping": "-6.29", 
+    "Principal": "-34.99"
+  }, 
+  "112-3085532-3197843": {
+    "Commission": "5.40", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "114-5929966-6257057": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "112-1520030-7372236": {
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "113-9604666-8212213": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "114-2364191-0521053": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "102-0284491-3264203": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "111-9096037-9677803": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "112-9191177-1362668": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "114-8735396-0435465": {
+    "Commission": "3.28", 
+    "Tax": "-2.19", 
+    "RefundCommission": "-0.66", 
+    "Principal": "-21.88"
+  }, 
+  "108-7882306-9617807": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "113-1162675-2341054": {
+    "ShippingChargeback": "9.98", 
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Shipping": "-9.98", 
+    "Principal": "-59.99"
+  }, 
+  "112-8637087-3840245": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "111-6393147-7133805": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "3.11", 
+    "Principal": "-39.99"
+  }, 
+  "110-8697778-7385054": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "106-7351964-9700240": {
+    "ShippingChargeback": "2.87", 
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Shipping": "-2.87", 
+    "Principal": "-38.99"
+  }, 
+  "108-7982743-6896245": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-3.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-4141960-8742633": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-3.99", 
+    "Principal": "-32.99"
+  }, 
+  "109-0899614-4175453": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "5.99", 
+    "Principal": "-39.99"
+  }, 
+  "115-7460753-3691437": {
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Principal": "-45.99"
+  }, 
+  "113-1518564-1450608": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "110-2446800-1743424": {
+    "Commission": "1.00", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "105-1213692-4978661": {
+    "Goodwill": "-5.00"
+  }, 
+  "112-7407099-6893059": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "112-2317494-8993048": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.16", 
+    "Principal": "-32.99"
+  }, 
+  "002-3248515-9407459": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "109-4251586-1582613": {
+    "ShippingChargeback": "2.99", 
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "-2.99", 
+    "Principal": "-36.99"
+  }, 
+  "116-7049134-3014642": {
+    "Goodwill": "-14.65"
+  }, 
+  "110-9911604-7261809": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "113-8977904-8582607": {
+    "Commission": "2.31", 
+    "RefundCommission": "-0.46", 
+    "Principal": "-15.40"
+  }, 
+  "106-6918470-3041027": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "002-4243397-5954621": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "110-1287512-1999446": {
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Principal": "-45.99"
+  }, 
+  "106-9484271-7911454": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "114-8481587-0627413": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "116-4579144-6938636": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "110-6470370-1105804": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "110-2128213-8149008": {
+    "Goodwill": "-14.00"
+  }, 
+  "114-7665759-5209038": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "109-0299654-4355427": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "103-1059373-5078628": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "111-4293609-7111438": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "107-8942457-5544207": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-8332371-4565863": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "110-2786103-5180212": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "115-0312684-5903449": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "106-8116673-0361044": {
+    "Commission": "2.00", 
+    "RefundCommission": "-0.40", 
+    "Principal": "-13.98"
+  }, 
+  "103-5272943-6445801": {
+    "Commission": "1.49", 
+    "Tax": "-1.00", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "002-9242114-6305003": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "104-0706819-1338627": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "103-6651584-5108255": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "110-9951583-4267413": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "106-3452234-7418627": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "109-6705950-8547433": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "106-1583059-7455441": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-1428484-0657864": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "103-4165214-0033024": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "113-9748669-0185838": {
+    "Commission": "1.67", 
+    "Tax": "-1.11", 
+    "RefundCommission": "-0.33", 
+    "Shipping": "2.50", 
+    "Principal": "-11.13"
+  }, 
+  "113-4380341-7138603": {
+    "ShippingChargeback": "2.99", 
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Shipping": "-2.99", 
+    "Principal": "-7.99"
+  }, 
+  "115-4155960-9021046": {
+    "ShippingChargeback": "6.37", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-6.37", 
+    "Principal": "-32.99"
+  }, 
+  "113-3415061-1348240": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "115-1159240-9365026": {
+    "Commission": "12.00", 
+    "RefundCommission": "-2.40", 
+    "Principal": "-79.98"
+  }, 
+  "113-9423273-5587459": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "105-0229588-5865825": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "002-6723295-5087444": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Shipping": "3.48", 
+    "Principal": "-19.99"
+  }, 
+  "112-4615333-2234664": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "103-7066082-2169060": {
+    "Commission": "5.10", 
+    "Tax": "-3.40", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "114-8752900-2814626": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "114-3929550-6463465": {
+    "Commission": "5.55", 
+    "Tax": "-3.70", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "109-2315642-7277831": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "102-5400728-1396258": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "105-9175188-1602613": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-7957667-7195437": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "113-8744437-9933007": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "3.00", 
+    "Principal": "-32.99"
+  }, 
+  "102-3907524-4184231": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-1840256-1248257": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Shipping": "1.45", 
+    "Principal": "-8.99"
+  }, 
+  "002-7073777-3991454": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "116-5329177-4682600": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "108-2844988-0371455": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "111-1611858-4721811": {
+    "Commission": "3.23", 
+    "RefundCommission": "-0.65", 
+    "Principal": "-21.50"
+  }, 
+  "106-3947098-4767452": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "002-7663311-1768204": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "112-2900273-4649010": {
+    "Commission": "5.25", 
+    "Tax": "-3.50", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "114-9950432-2602644": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "103-9119433-5473821": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "112-7426480-7643443": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "110-6270671-0249004": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "8.00"
+  }, 
+  "103-8085868-0754648": {
+    "Commission": "8.39", 
+    "RefundCommission": "-1.68", 
+    "Principal": "-55.90"
+  }, 
+  "104-9089445-4859421": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "113-4919282-1618633": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "5.00"
+  }, 
+  "116-5395973-0246633": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "114-8533797-2563424": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "107-3489192-1339467": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "002-1404398-2981060": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "106-2933964-4636251": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "106-6948169-4237853": {
+    "ShippingChargeback": "3.25", 
+    "Shipping": "-3.25"
+  }, 
+  "111-9608343-5211436": {
+    "Commission": "4.50", 
+    "RestockingFee": "6.00", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "103-2197318-1443450": {
+    "Commission": "2.10", 
+    "RefundCommission": "-0.42", 
+    "Principal": "-13.99"
+  }, 
+  "105-6444862-7908237": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "5.99", 
+    "Principal": "-39.99"
+  }, 
+  "002-3643978-7624261": {
+    "ShippingChargeback": "6.29", 
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Shipping": "-6.29", 
+    "Principal": "-34.99"
+  }, 
+  "002-1355178-1121841": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "103-7401636-7338638": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Shipping": "1.08", 
+    "Principal": "-9.95"
+  }, 
+  "113-9122731-0531430": {
+    "Goodwill": "-4.99"
+  }, 
+  "107-2575167-0587464": {
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "103-3515827-8369829": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "114-5614455-2550631": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "5.99", 
+    "Principal": "-39.99"
+  }, 
+  "115-5713254-9656200": {
+    "Commission": "2.33", 
+    "RefundCommission": "-0.47", 
+    "Principal": "-15.54"
+  }, 
+  "116-9363548-8815447": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-5.99", 
+    "Principal": "-31.99"
+  }, 
+  "115-6184357-0318605": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "103-1810595-1521018": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "106-8307284-1013866": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "102-4571695-6815468": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "112-8634380-2728268": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "108-9060885-6284220": {
+    "Commission": "7.80", 
+    "RefundCommission": "-1.56", 
+    "Principal": "-51.99"
+  }, 
+  "104-5542116-1547426": {
+    "ShippingChargeback": "9.98", 
+    "ShippingTax": "-1.00", 
+    "Tax": "-3.30", 
+    "Shipping": "-9.98", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "103-5232153-6515461": {
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "002-5029157-0501826": {
+    "Commission": "3.90", 
+    "RefundCommission": "-0.78", 
+    "Principal": "-25.99"
+  }, 
+  "111-1532491-9278639": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Shipping": "-6.25", 
+    "Principal": "-34.99"
+  }, 
+  "109-5520013-8541807": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "5.00"
+  }, 
+  "105-0738735-0065024": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "111-3636013-6105041": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "116-6058578-5198649": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "116-6331622-6953054": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "8.00"
+  }, 
+  "104-2692602-4931430": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "1.50", 
+    "Principal": "-49.99"
+  }, 
+  "104-1957262-5518614": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "114-7592015-8170608": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.76", 
+    "Principal": "-32.99"
+  }, 
+  "102-0598443-3363436": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "113-3648126-2001849": {
+    "ShippingChargeback": "6.33", 
+    "Shipping": "-6.33"
+  }, 
+  "103-8531955-8535467": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-5307131-2898630": {
+    "Commission": "1.78", 
+    "RefundCommission": "-0.36", 
+    "Principal": "-11.84"
+  }, 
+  "116-1751405-2740239": {
+    "Commission": "1.00", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "104-0384307-3189028": {
+    "Commission": "9.00", 
+    "Tax": "-6.00", 
+    "RefundCommission": "-1.80", 
+    "Shipping": "5.99", 
+    "Principal": "-59.99"
+  }, 
+  "103-7929234-8104251": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "114-7442488-7165835": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "002-5848539-9845826": {
+    "Commission": "2.40", 
+    "Tax": "-1.60", 
+    "RefundCommission": "-0.48", 
+    "Principal": "-15.98"
+  }, 
+  "104-4979342-7918667": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-5.99", 
+    "Principal": "-31.99"
+  }, 
+  "105-2732209-1022609": {
+    "Commission": "8.39", 
+    "RefundCommission": "-1.68", 
+    "Principal": "-55.90"
+  }, 
+  "002-5653617-5358638": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "103-2057092-6935444": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "107-5096440-8343458": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "105-5280433-3299422": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "104-0468979-2366628": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "116-5689986-1519465": {
+    "ShippingChargeback": "3.29", 
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "-3.29", 
+    "Principal": "-39.99"
+  }, 
+  "113-4514000-1307440": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "105-0208589-4565818": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "102-4895508-3649055": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "108-6872130-9148263": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "114-3673796-2029805": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "106-4988822-1617027": {
+    "ShippingChargeback": "6.29", 
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "-6.29", 
+    "Principal": "-36.99"
+  }, 
+  "107-1589414-2085859": {
+    "Commission": "1.34", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.95"
+  }, 
+  "103-8494389-9696259": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "111-6367820-0192265": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "108-3466449-9602631": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-5.99", 
+    "Principal": "-32.99"
+  }, 
+  "114-9768031-2371403": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-6.25", 
+    "Principal": "-32.99"
+  }, 
+  "109-0859881-6419404": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "114-7292877-6853801": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-9337163-7065859": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "114-5798689-3196210": {
+    "Commission": "2.70", 
+    "RefundCommission": "-0.54", 
+    "Principal": "-17.99"
+  }, 
+  "107-4464742-0171434": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "-3.99", 
+    "Principal": "-49.99"
+  }, 
+  "103-5550596-6294647": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "103-0532254-7559432": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "110-3248691-7605028": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "113-0285662-9887440": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "3.00", 
+    "Principal": "-32.99"
+  }, 
+  "103-5651990-3121040": {
+    "Commission": "5.25", 
+    "Tax": "-3.50", 
+    "RefundCommission": "-1.05", 
+    "Shipping": "2.99", 
+    "Principal": "-34.99"
+  }, 
+  "112-8537850-4465037": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "109-0860171-0233805": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "108-4954699-9391439": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "114-3815380-9144253": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "104-6962666-1747442": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "115-6366067-1334668": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "103-1420837-6713066": {
+    "Commission": "3.90", 
+    "GiftwrapChargeback": "3.49", 
+    "RefundCommission": "-0.78", 
+    "GiftWrap": "-3.49", 
+    "Principal": "-25.99"
+  }, 
+  "112-1595289-7957046": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "108-7469856-2253815": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "106-3873801-1128258": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "108-3548018-0461859": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "116-7698902-8404211": {
+    "Commission": "5.25", 
+    "RestockingFee": "7.00", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "114-4741346-5994603": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "107-8775259-3808207": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "111-3566415-7450609": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "104-3195459-1834664": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "5.00"
+  }, 
+  "102-4137392-9555428": {
+    "Commission": "1.57", 
+    "RefundCommission": "-0.31", 
+    "Principal": "-10.48"
+  }, 
+  "113-7459963-6756236": {
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Principal": "-45.99"
+  }, 
+  "110-9068490-8949845": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-7381845-0364241": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-0625434-8918639": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "107-9246796-3036224": {
+    "ShippingChargeback": "3.16", 
+    "Shipping": "-3.16"
+  }, 
+  "111-3980056-4905032": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "108-2844960-9029053": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "110-0820374-6199401": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "105-2890891-4785861": {
+    "Goodwill": "-5.72"
+  }, 
+  "105-9022040-2552211": {
+    "ShippingChargeback": "6.14", 
+    "ShippingTax": "-0.61", 
+    "Tax": "-2.00", 
+    "Shipping": "-6.14", 
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "112-4099069-7865049": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-5.99", 
+    "Principal": "-31.99"
+  }, 
+  "110-7117387-8005017": {
+    "Commission": "4.66", 
+    "RefundCommission": "-0.93", 
+    "Principal": "-31.00"
+  }, 
+  "114-0333913-3501849": {
+    "ShippingChargeback": "3.99", 
+    "ShippingTax": "-0.40", 
+    "Shipping": "-3.99"
+  }, 
+  "111-4732608-8886602": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "107-3035440-6860229": {
+    "Commission": "2.23", 
+    "Tax": "-1.49", 
+    "RefundCommission": "-0.45", 
+    "Principal": "-14.88"
+  }, 
+  "108-4846888-8581816": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "106-0665518-2681816": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "106-3459802-2342649": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-60.00"
+  }, 
+  "116-8253488-6450658": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "110-4654443-2389065": {
+    "ShippingChargeback": "6.07", 
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "-6.07", 
+    "Principal": "-40.00"
+  }, 
+  "114-5103843-1839450": {
+    "Commission": "2.10", 
+    "Tax": "-1.40", 
+    "RefundCommission": "-0.42", 
+    "Principal": "-13.99"
+  }, 
+  "110-3796294-7818656": {
+    "Commission": "2.33", 
+    "RefundCommission": "-0.47", 
+    "Principal": "-15.50"
+  }, 
+  "110-5346194-7501029": {
+    "Commission": "8.40", 
+    "Tax": "-5.60", 
+    "RefundCommission": "-1.68", 
+    "Principal": "-55.99"
+  }, 
+  "113-4166990-3871429": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "104-0535433-8159407": {
+    "Commission": "2.23", 
+    "RefundCommission": "-0.45", 
+    "Principal": "-14.89"
+  }, 
+  "002-4820811-2136256": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "112-8017736-5012233": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "002-0003059-4429871": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "108-5394124-2161039": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "109-2610663-6528212": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-5840936-0405006": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "111-2177310-0011439": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "002-7138940-2176252": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "111-1708941-1202650": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "002-1719081-3737044": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "108-4306518-2978662": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-5453426-4189830": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "106-6413574-1369041": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "002-0533179-2434636": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "111-3377986-9435460": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "102-7093464-8645845": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "110-3202872-6296202": {
+    "ShippingChargeback": "1.58", 
+    "ShippingTax": "-0.16", 
+    "Shipping": "-1.58"
+  }, 
+  "002-7293929-8241053": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "105-6011717-7018626": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "112-8187103-4548214": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "3.00", 
+    "Principal": "-49.99"
+  }, 
+  "112-3219446-2284204": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "106-2766805-1754623": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "108-4036023-8355435": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "113-4110163-4943466": {
+    "Commission": "1.35", 
+    "Tax": "-0.90", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "108-1095665-0860265": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-8002145-6758639": {
+    "Commission": "2.40", 
+    "RefundCommission": "-0.48", 
+    "Principal": "-15.99"
+  }, 
+  "107-5455747-8165859": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-7.99"
+  }, 
+  "107-9569831-3255455": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "113-1160353-1993069": {
+    "ShippingChargeback": "3.15", 
+    "ShippingTax": "-0.32", 
+    "Tax": "-1.11", 
+    "Shipping": "-3.15", 
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "113-9619507-8629857": {
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "109-6103530-7018618": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "115-6261335-9738660": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "2.99", 
+    "Principal": "-36.99"
+  }, 
+  "115-1429642-7257044": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "103-5129503-6625853": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "107-0485751-2087407": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Shipping": "-5.99", 
+    "Principal": "-59.99"
+  }, 
+  "102-4810387-8991422": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "115-1187720-8789064": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "002-8020005-4207421": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "107-8295856-1911464": {
+    "Commission": "1.67", 
+    "Tax": "-1.11", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "112-1635426-4070612": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "110-1153053-5961000": {
+    "Commission": "1.00", 
+    "Tax": "-0.70", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "002-6462381-1973002": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "113-8846670-9071464": {
+    "Commission": "1.19", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "102-0564778-1218611": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "103-8673327-8601012": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "114-7962664-9252210": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "105-6462112-4977023": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "114-0098653-9407444": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "104-1499961-0329034": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "114-3745925-5957066": {
+    "Commission": "2.40", 
+    "RefundCommission": "-0.48", 
+    "Principal": "-15.99"
+  }, 
+  "106-7473690-5511447": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "10.00"
+  }, 
+  "103-3653020-5169864": {
+    "ShippingChargeback": "5.22", 
+    "Shipping": "-5.22"
+  }, 
+  "112-9279411-8465862": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Shipping": "-3.99", 
+    "Principal": "18.00"
+  }, 
+  "103-9034419-6293846": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-3717453-9757859": {
+    "Goodwill": "-6.00"
+  }, 
+  "108-5008131-6716262": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "111-6190275-9676269": {
+    "ShippingChargeback": "11.34", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-11.34", 
+    "Principal": "-32.99"
+  }, 
+  "116-5275749-9791450": {
+    "Commission": "3.60", 
+    "RefundCommission": "-0.72", 
+    "Principal": "-23.99"
+  }, 
+  "109-0130892-1239424": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "108-3416063-2954636": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "115-0733768-8893857": {
+    "Commission": "6.00", 
+    "Tax": "-4.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "112-5698525-3421859": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "109-0303369-5593835": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Shipping": "2.84", 
+    "Principal": "-34.99"
+  }, 
+  "110-1734086-8933015": {
+    "ShippingChargeback": "5.95", 
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Shipping": "-5.95", 
+    "Principal": "-33.99"
+  }, 
+  "111-0454514-4234653": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "114-8023745-7999454": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "109-7195006-6709812": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "114-8027528-4957050": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "111-9531074-0909033": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "103-0391859-3696236": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "109-1228001-3459423": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "5.00"
+  }, 
+  "102-8388433-8437038": {
+    "Commission": "5.25", 
+    "Tax": "-3.50", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "116-5497365-9850611": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "105-9879977-4991443": {
+    "Commission": "1.05", 
+    "Tax": "-0.70", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "102-7002418-1169806": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "115-3722243-3565850": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "102-2728690-2789019": {
+    "ShippingChargeback": "6.01", 
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Shipping": "-6.01", 
+    "Principal": "-8.99"
+  }, 
+  "107-7244512-1915408": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "106-8957523-3441828": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "114-6857471-3622653": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "116-5375447-7968251": {
+    "Commission": "2.10", 
+    "RefundCommission": "-0.42", 
+    "Principal": "-13.99"
+  }, 
+  "112-4999566-0196256": {
+    "Commission": "7.95", 
+    "RefundCommission": "-1.59", 
+    "Principal": "-52.99"
+  }, 
+  "114-5596137-5947460": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "112-3669776-1253826": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "109-8661217-1242640": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "104-2522369-1270625": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "104-3311413-6937001": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "114-2609248-1309810": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-7490988-9985040": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "104-9293670-2783423": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "114-1170151-1492227": {
+    "Commission": "3.74", 
+    "RefundCommission": "-0.75", 
+    "Principal": "-24.94"
+  }, 
+  "115-0264851-7139434": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "108-2044283-4510664": {
+    "Commission": "1.58", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "115-8501222-9741028": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "112-9868994-7877038": {
+    "ShippingChargeback": "6.19", 
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Shipping": "-6.19", 
+    "Principal": "-20.00"
+  }, 
+  "113-7175174-5417053": {
+    "Commission": "4.80", 
+    "Goodwill": "-5.00", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "114-8929075-4703451": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "113-9967715-8302653": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "107-1572561-6861007": {
+    "ShippingChargeback": "3.99", 
+    "Shipping": "-3.99"
+  }, 
+  "108-1775262-9090661": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "113-6779689-0878608": {
+    "Commission": "2.98", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-9.95"
+  }, 
+  "108-5353074-1909062": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "102-3870312-9719457": {
+    "Commission": "1.80", 
+    "RefundCommission": "-0.36", 
+    "Principal": "-11.97"
+  }, 
+  "109-0592498-6450608": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "114-4614238-3133028": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "113-4525248-4616207": {
+    "Goodwill": "-29.97"
+  }, 
+  "108-4816779-0977047": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "114-7194082-5143439": {
+    "Commission": "4.65", 
+    "Tax": "-3.10", 
+    "RefundCommission": "-0.93", 
+    "Principal": "-31.00"
+  }, 
+  "112-8439270-6642633": {
+    "Commission": "1.05", 
+    "Tax": "-0.70", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "112-6626290-5532235": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "104-5951294-7659453": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "107-0451534-4817013": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "112-7654513-0849859": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "106-4254610-3541022": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "106-7965409-5995430": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "113-0183583-1097018": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "103-4969332-8685821": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "-6.25", 
+    "Principal": "-39.99"
+  }, 
+  "111-5808100-1645865": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "111-3342164-6014629": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "116-5451383-8076234": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "107-6523777-3356257": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "-6.25", 
+    "Principal": "-32.99"
+  }, 
+  "116-2072557-1521013": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Shipping": "1.50", 
+    "Principal": "-39.99"
+  }, 
+  "109-3834623-1156200": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "110-0596268-7513818": {
+    "Commission": "5.55", 
+    "Tax": "-3.70", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "105-9162993-9827453": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-4116319-8489843": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "105-5778353-9422628": {
+    "Commission": "1.05", 
+    "Tax": "-0.70", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "115-5578353-3792246": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "107-5523321-6164201": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Shipping": "5.99", 
+    "Principal": "-59.99"
+  }, 
+  "109-2735186-8748268": {
+    "Commission": "2.25", 
+    "RefundCommission": "-0.45", 
+    "Principal": "8.00"
+  }, 
+  "114-1807596-5881814": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.84", 
+    "Principal": "-32.99"
+  }, 
+  "112-0113454-4311430": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "116-3558169-5713835": {
+    "Commission": "1.67", 
+    "Tax": "-1.11", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "107-8827770-3462640": {
+    "Commission": "3.75", 
+    "RefundCommission": "-0.75", 
+    "Principal": "7.00"
+  }, 
+  "108-7806056-8370626": {
+    "Commission": "2.31", 
+    "Tax": "-1.54", 
+    "RefundCommission": "-0.46", 
+    "Principal": "-15.40"
+  }, 
+  "107-1790851-5244200": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "105-3080021-3365804": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "107-3490935-6666605": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "103-6058694-0519408": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-6723574-6300261": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "114-7868079-4250600": {
+    "Commission": "2.40", 
+    "RefundCommission": "-0.48", 
+    "Principal": "-15.98"
+  }, 
+  "113-2258092-0157830": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "114-8469137-0387446": {
+    "Commission": "2.40", 
+    "RefundCommission": "-0.48", 
+    "Principal": "-7.99"
+  }, 
+  "112-8667651-5789001": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "002-0555079-7193805": {
+    "Commission": "5.10", 
+    "Tax": "-3.40", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "106-4556829-2750632": {
+    "Commission": "1.57", 
+    "RefundCommission": "-0.31", 
+    "Shipping": "1.40", 
+    "Principal": "-10.48"
+  }, 
+  "116-5822556-0289827": {
+    "Commission": "1.49", 
+    "Tax": "-1.00", 
+    "RefundCommission": "-0.30", 
+    "Shipping": "2.00", 
+    "Principal": "-9.95"
+  }, 
+  "109-5292111-5781000": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "110-3094154-3357018": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "111-7290175-3661029": {
+    "Commission": "5.40", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "107-9581278-0508202": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "109-0987555-2150606": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "2.99", 
+    "Principal": "-32.99"
+  }, 
+  "002-7435385-1198651": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "111-9646879-1652256": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "104-6014758-3094633": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "002-7000814-1183442": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "116-7233666-6902600": {
+    "Commission": "1.79", 
+    "RefundCommission": "-0.36", 
+    "Principal": "-11.96"
+  }, 
+  "104-3208145-9191404": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "108-8406207-0224255": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "110-7960306-4462650": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-8404620-5761055": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "109-9954056-9526607": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "114-9343767-2720228": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "116-7554205-8665860": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "108-0155133-9223470": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "108-0035495-3845019": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "114-5486155-7138610": {
+    "Goodwill": "-3.65"
+  }, 
+  "111-0876408-2790663": {
+    "Commission": "1.58", 
+    "Tax": "-1.05", 
+    "RefundCommission": "-0.32", 
+    "Principal": "-10.50"
+  }, 
+  "103-8368167-0465842": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "103-0261463-4994626": {
+    "Commission": "2.10", 
+    "RefundCommission": "-0.42", 
+    "Principal": "-13.99"
+  }, 
+  "114-1077484-9164248": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "115-1796375-0928246": {
+    "Commission": "3.45", 
+    "RefundCommission": "-0.69", 
+    "Principal": "-22.99"
+  }, 
+  "111-1990273-6110603": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "116-9757191-8655441": {
+    "ShippingChargeback": "6.33", 
+    "ShippingTax": "-0.63", 
+    "Tax": "-3.30", 
+    "Shipping": "-6.33", 
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-7549391-4903416": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "103-3074467-5016214": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "111-3648435-8687442": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "104-5356350-7553058": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "105-9318510-6844221": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "113-8717080-4375428": {
+    "Commission": "5.25", 
+    "Tax": "-3.50", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "109-2471409-7968255": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "102-1616953-5867410": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "102-2577076-5441014": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "106-7384413-4426659": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "106-4192946-6400253": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "107-7359539-1861017": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "112-3707511-9858669": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "112-7204275-4969839": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "002-4204685-7034659": {
+    "ShippingChargeback": "6.33", 
+    "ShippingTax": "-0.63", 
+    "Tax": "-3.50", 
+    "Shipping": "-6.33", 
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "104-0518627-9454648": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "107-0396754-3562614": {
+    "ShippingChargeback": "5.99", 
+    "ShippingTax": "-0.60", 
+    "Tax": "-3.00", 
+    "Shipping": "-5.99", 
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-1124637-0961013": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "109-0168252-0406626": {
+    "Commission": "1.35", 
+    "Tax": "-0.90", 
+    "RefundCommission": "-0.27", 
+    "Principal": "-8.99"
+  }, 
+  "110-2610667-3669831": {
+    "Commission": "7.95", 
+    "Tax": "-5.30", 
+    "RefundCommission": "-1.59", 
+    "Principal": "-52.99"
+  }, 
+  "002-5957411-0603433": {
+    "Commission": "2.98", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.90"
+  }, 
+  "002-2729690-3202659": {
+    "ShippingChargeback": "5.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-5.99", 
+    "Principal": "-31.99"
+  }, 
+  "113-1261591-7154615": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "114-6004615-3956236": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "106-3551572-4149818": {
+    "Commission": "3.30", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "102-3980517-4797806": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "106-5040365-0236230": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "3.00", 
+    "Principal": "-32.99"
+  }, 
+  "109-1723037-3087442": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "109-3410289-0925810": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "103-3761537-1272252": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "-3.99", 
+    "Principal": "-49.99"
+  }, 
+  "107-6423446-6766668": {
+    "Commission": "4.80", 
+    "Tax": "-3.20", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "116-8411000-7868200": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "108-6085327-8919435": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "114-5665284-4414615": {
+    "Goodwill": "-13.00"
+  }, 
+  "109-6144417-9487456": {
+    "Commission": "1.00", 
+    "Tax": "-0.70", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "113-3147753-3019405": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "113-5829552-8833852": {
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Principal": "-45.99"
+  }, 
+  "116-1186404-8306649": {
+    "Commission": "7.50", 
+    "Tax": "-5.00", 
+    "RefundCommission": "-1.50", 
+    "Shipping": "5.99", 
+    "Principal": "-49.99"
+  }, 
+  "104-0095815-2727409": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "110-6636057-0707419": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "102-3498865-7683468": {
+    "ShippingChargeback": "6.99", 
+    "Shipping": "-6.99"
+  }, 
+  "113-2768933-5223431": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "002-3696893-0486608": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "002-3514258-5169818": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "109-6617025-1704265": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "103-5904047-3690629": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "105-8438979-6187423": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "116-8800738-5314617": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "104-7693880-0365808": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "103-9187717-3092212": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "115-4333392-1181028": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Shipping": "1.92", 
+    "Principal": "-32.99"
+  }, 
+  "110-5185094-8858665": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "110-1487309-1558602": {
+    "Commission": "1.67", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "112-5808870-5272237": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "107-4653601-6081821": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Shipping": "2.99", 
+    "Principal": "-29.99"
+  }, 
+  "110-0094727-2170616": {
+    "Commission": "5.85", 
+    "RefundCommission": "-1.17", 
+    "Principal": "-38.99"
+  }, 
+  "114-6850261-6610608": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "112-3061511-4859419": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-5735319-5520252": {
+    "Commission": "9.90", 
+    "RefundCommission": "-1.98", 
+    "Principal": "-32.99"
+  }, 
+  "102-9040145-5856202": {
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "104-6191954-3405819": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "111-7407296-1749822": {
+    "ShippingChargeback": "6.03", 
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Shipping": "-6.03", 
+    "Principal": "-20.00"
+  }, 
+  "115-4995107-8502669": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "114-7503820-3742608": {
+    "Commission": "3.60", 
+    "RefundCommission": "-0.72", 
+    "Principal": "-23.99"
+  }, 
+  "102-3675986-1602644": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "115-0060620-7293057": {
+    "Commission": "5.70", 
+    "Tax": "-3.80", 
+    "RefundCommission": "-1.14", 
+    "Shipping": "3.00", 
+    "Principal": "-37.99"
+  }, 
+  "105-2521566-5833049": {
+    "ShippingChargeback": "5.23", 
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Shipping": "-5.23", 
+    "Principal": "-35.99"
+  }, 
+  "115-0979095-6375413": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "104-5351107-6916236": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.98"
+  }, 
+  "111-3352388-9969862": {
+    "ShippingChargeback": "6.37", 
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Shipping": "-6.37", 
+    "Principal": "-36.99"
+  }, 
+  "002-4402805-1811415": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "002-7698563-0415412": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "105-0107741-4605038": {
+    "Shipping": "2.99"
+  }, 
+  "112-8044626-3837808": {
+    "Commission": "3.30", 
+    "Tax": "-2.20", 
+    "RefundCommission": "-0.66", 
+    "Principal": "18.00"
+  }, 
+  "107-2552636-4758652": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "109-8241566-2320255": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "113-1919426-1073800": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "23.00"
+  }, 
+  "112-7430444-1108264": {
+    "Commission": "1.65", 
+    "RefundCommission": "-0.33", 
+    "Principal": "5.00"
+  }, 
+  "109-2610821-7377834": {
+    "Commission": "1.20", 
+    "Tax": "-0.80", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "111-4825172-3781032": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "111-7490319-3333849": {
+    "Commission": "1.67", 
+    "Tax": "-1.11", 
+    "RefundCommission": "-0.33", 
+    "Principal": "-11.13"
+  }, 
+  "108-4324943-2870661": {
+    "Commission": "5.40", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "002-0370611-5882619": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "110-1553144-8772221": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Principal": "-35.99"
+  }, 
+  "114-4865157-0932232": {
+    "ShippingChargeback": "3.52", 
+    "Commission": "3.34", 
+    "RefundCommission": "-0.67", 
+    "Shipping": "-3.52", 
+    "Principal": "-22.26"
+  }, 
+  "116-2024513-4197055": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "104-6342438-7461030": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "107-3760849-1064247": {
+    "ShippingChargeback": "5.99", 
+    "Shipping": "-5.99"
+  }, 
+  "111-9143578-0681027": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "116-7810518-3912260": {
+    "Goodwill": "-6.25"
+  }, 
+  "107-5188890-5400255": {
+    "Commission": "5.55", 
+    "RefundCommission": "-1.11", 
+    "Principal": "-36.99"
+  }, 
+  "103-8665656-9795409": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "106-5103135-4564255": {
+    "Commission": "1.80", 
+    "Tax": "-1.20", 
+    "RefundCommission": "-0.36", 
+    "Principal": "-11.97"
+  }, 
+  "105-5450792-8703464": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "115-4006595-1117851": {
+    "ShippingChargeback": "6.25", 
+    "Commission": "4.50", 
+    "RefundCommission": "-0.90", 
+    "Shipping": "-6.25", 
+    "Principal": "-29.99"
+  }, 
+  "107-3545480-8173855": {
+    "Commission": "1.35", 
+    "RefundCommission": "-0.27", 
+    "Shipping": "1.50", 
+    "Principal": "-8.99"
+  }, 
+  "105-3957912-9665853": {
+    "Commission": "1.05", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "112-5181996-0562643": {
+    "ShippingChargeback": "9.98", 
+    "Commission": "6.90", 
+    "RefundCommission": "-1.38", 
+    "Shipping": "-9.98", 
+    "Principal": "-45.99"
+  }, 
+  "113-4242715-3363453": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "112-3381728-1354658": {
+    "Commission": "2.23", 
+    "RefundCommission": "-0.45", 
+    "Principal": "-14.89"
+  }, 
+  "105-5155195-0825026": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "13.00"
+  }, 
+  "103-0559567-5021832": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "104-0026624-2513007": {
+    "Commission": "5.25", 
+    "RefundCommission": "-1.05", 
+    "Principal": "-34.99"
+  }, 
+  "002-4084642-7338649": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "111-1017025-8325860": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "002-7829169-1501823": {
+    "ShippingChargeback": "3.99", 
+    "Shipping": "-3.99"
+  }, 
+  "105-5545499-4525022": {
+    "Commission": "3.00", 
+    "Tax": "-2.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "103-1984493-1877023": {
+    "Commission": "1.19", 
+    "RefundCommission": "-0.24", 
+    "Principal": "1.99"
+  }, 
+  "103-2935150-7448217": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "2.96"
+  }, 
+  "103-3580709-7753837": {
+    "ShippingChargeback": "2.68", 
+    "Shipping": "-2.68"
+  }, 
+  "111-9909322-0473048": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "105-3297062-5721843": {
+    "ShippingChargeback": "10.99", 
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Shipping": "-10.99", 
+    "Principal": "-31.99"
+  }, 
+  "108-4689558-3949056": {
+    "ShippingChargeback": "1.86", 
+    "Shipping": "-1.86"
+  }, 
+  "107-4685951-1924209": {
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Principal": "-9.95"
+  }, 
+  "115-5698840-9499461": {
+    "Commission": "4.80", 
+    "RefundCommission": "-0.96", 
+    "Principal": "-31.99"
+  }, 
+  "115-7257583-7211460": {
+    "Commission": "2.10", 
+    "RefundCommission": "-0.42", 
+    "Principal": "-13.99"
+  }, 
+  "103-8694480-0612202": {
+    "Commission": "9.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "102-8677686-1498647": {
+    "ShippingChargeback": "3.99", 
+    "Commission": "1.49", 
+    "RefundCommission": "-0.30", 
+    "Shipping": "-3.99", 
+    "Principal": "-9.95"
+  }, 
+  "103-5507249-2023442": {
+    "Commission": "5.70", 
+    "RefundCommission": "-1.14", 
+    "Principal": "-37.99"
+  }, 
+  "114-5642729-5692267": {
+    "Commission": "1.05", 
+    "RefundCommission": "-0.21", 
+    "Principal": "2.00"
+  }, 
+  "102-8959123-2900223": {
+    "Goodwill": "-9.99"
+  }, 
+  "111-7044115-0647422": {
+    "Commission": "1.00", 
+    "RefundCommission": "-0.20", 
+    "Principal": "-6.99"
+  }, 
+  "109-6732063-6044236": {
+    "Commission": "9.00", 
+    "Tax": "-6.00", 
+    "RefundCommission": "-1.80", 
+    "Principal": "-59.99"
+  }, 
+  "109-9428303-6174630": {
+    "Commission": "5.40", 
+    "Tax": "-3.60", 
+    "RefundCommission": "-1.08", 
+    "Shipping": "1.50", 
+    "Principal": "-35.99"
+  }, 
+  "114-1079816-5193001": {
+    "Commission": "2.33", 
+    "RefundCommission": "-0.47", 
+    "Principal": "-15.50"
+  }, 
+  "002-4677069-6654617": {
+    "Commission": "5.40", 
+    "RefundCommission": "-1.08", 
+    "Shipping": "5.99", 
+    "Principal": "-35.99"
+  }, 
+  "105-5644159-0315466": {
+    "Commission": "5.10", 
+    "RefundCommission": "-1.02", 
+    "Principal": "-33.99"
+  }, 
+  "115-1742763-8787418": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "113-7840406-1004231": {
+    "Commission": "1.20", 
+    "RefundCommission": "-0.24", 
+    "Principal": "-7.99"
+  }, 
+  "105-6474656-7862647": {
+    "Commission": "7.50", 
+    "RefundCommission": "-1.50", 
+    "Principal": "-49.99"
+  }, 
+  "114-9381610-2109017": {
+    "Commission": "4.50", 
+    "Tax": "-3.00", 
+    "RefundCommission": "-0.90", 
+    "Principal": "-29.99"
+  }, 
+  "108-7271338-0877004": {
+    "Commission": "4.95", 
+    "Tax": "-3.30", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }, 
+  "113-8293695-9192237": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-19.99"
+  }, 
+  "116-8084094-1689810": {
+    "Commission": "3.00", 
+    "RefundCommission": "-0.60", 
+    "Principal": "-20.00"
+  }, 
+  "002-2941543-2626641": {
+    "Commission": "6.00", 
+    "RefundCommission": "-1.20", 
+    "Principal": "-39.99"
+  }, 
+  "108-0048270-8863460": {
+    "Commission": "4.95", 
+    "RefundCommission": "-0.99", 
+    "Principal": "-32.99"
+  }
+}

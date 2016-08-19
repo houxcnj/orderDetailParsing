@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
+
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 
@@ -133,6 +134,8 @@ public class OrderTool2 extends JFrame {
 	 * Create the frame.
 	 */
 	public OrderTool2() {
+		
+		System.out.println(sellerId);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1024, 768);
 		contentPane = new JPanel();
@@ -152,6 +155,7 @@ public class OrderTool2 extends JFrame {
 		
 		btnProcess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				clearTextFields();
 				logArea.append(LocalDateTime.now().toString() + ": Processing\n");
 				// get input from idInputField
 				orderID = idInputField.getText();
@@ -922,29 +926,34 @@ public class OrderTool2 extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Clear all text");
 		}
 		public void actionPerformed(ActionEvent e) {
-			orderField.setText("");
-			skuField.setText("");
-			asinField.setText("");;
-			nameField.setText("");
-			add1Field.setText("");;
-			add2Field.setText("");
-			cityField.setText("");
-			stateField.setText("");
-			zip1Field.setText("");
-			zip2Field.setText("");
-			productField.setText("");;
-			refundField.setText("");
-			dateField.setText("");
-			phoneField.setText("");
-			ffField.setText("");
-			channelField.setText("");
-			emailField.setText("");
-			sskuField.setText("");
-			crField.setText("");
-			trackField.setText("");
-			
 			idInputField.setText("");
+			clearTextFields();
 		}
+	}
+	
+	public void clearTextFields() {
+		orderField.setText("");
+		skuField.setText("");
+		asinField.setText("");;
+		nameField.setText("");
+		add1Field.setText("");;
+		add2Field.setText("");
+		cityField.setText("");
+		stateField.setText("");
+		zip1Field.setText("");
+		zip2Field.setText("");
+		productField.setText("");;
+		refundField.setText("");
+		dateField.setText("");
+		phoneField.setText("");
+		ffField.setText("");
+		channelField.setText("");
+		emailField.setText("");
+		sskuField.setText("");
+		crField.setText("");
+		trackField.setText("");
+		replaceStdField.setText("");
+		
 	}
 	//exit action
 	private class SwingAction_2 extends AbstractAction {
@@ -1214,6 +1223,23 @@ public class OrderTool2 extends JFrame {
 	}
 	
 	public void setSellerID (String sellid) {
-		sellerId = sellid;
+		sellerId = rot13(sellid);
+		System.out.println(sellerId);
 	}
+	
+	public String rot13(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if       (c >= 'a' && c <= 'm') c += 13;
+            else if  (c >= 'A' && c <= 'M') c += 13;
+            else if  (c >= 'n' && c <= 'z') c -= 13;
+            else if  (c >= 'N' && c <= 'Z') c -= 13;
+            System.out.print(c);
+            result += c;
+        }
+        
+        return result;
+    }
+
 }

@@ -69,16 +69,24 @@ public class MWSConfig {
             config.setServiceURL(serviceURL);
             // Set other client connection configurations here.
             try {
-            	FileReader reader = new FileReader("MWSKey.txt");
+            	FileReader reader = new FileReader("myKey.txt");
             	BufferedReader in = new BufferedReader(reader);
             	String line = in.readLine();
-            	while ((line = in.readLine()).indexOf("AWS") == -1) ;
-            	accessKey = line.substring(line.indexOf("\t")+1);
+            	// while ((line = in.readLine()).indexOf("AWS") == -1) ;
             	line = in.readLine();
-            	secretKey = line.substring(line.indexOf("\t")+1);
+            	String enaccessKey = line;// line.substring(line.indexOf("\t")+1);
+            	line = in.readLine();
+            	String ensecretKey = line; // line.substring(line.indexOf("\t")+1);
+            	
+            	
+            	accessKey = rot13(enaccessKey);
+            	secretKey = rot13(ensecretKey);
+            	
             	System.out.println(accessKey);
             	System.out.println(secretKey);
             	in.close();
+            	
+            	
             	} catch (Exception e) {
             		e.getMessage();
             	}
@@ -87,6 +95,21 @@ public class MWSConfig {
                     appName, appVersion, config, null);
         }
         return client;
+    }
+    
+    public static String rot13(String str) {
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if       (c >= 'a' && c <= 'm') c += 13;
+            else if  (c >= 'A' && c <= 'M') c += 13;
+            else if  (c >= 'n' && c <= 'z') c -= 13;
+            else if  (c >= 'N' && c <= 'Z') c -= 13;
+            System.out.print(c);
+            result += c;
+        }
+        
+        return result;
     }
 
 }
