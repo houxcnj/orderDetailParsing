@@ -1576,8 +1576,20 @@
     "Principal": "23.00"
   }, 
   "110-3248691-7605028": {
-    "Commission": "7.50", 
+    "Original_SalesTaxServiceFee": "-0.15", 
+    "Original_ShippingChargeback": "-1.86", 
+    "Original_ShippingTax": "0.60", 
+    "Original_Tax": "5.00", 
+    "Original_Principal": "49.99", 
+    "Original_GiftWrap": "3.49", 
+    "Original_Commission": "-7.50", 
+    "Original_FBAPerUnitFulfillmentFee": "-1.06", 
     "Tax": "-5.00", 
+    "Original_FBAPerOrderFulfillmentFee": "-1.00", 
+    "Original_GiftwrapChargeback": "-3.49", 
+    "Commission": "7.50", 
+    "Original_FBAWeightBasedFee": "-0.96", 
+    "Original_Shipping": "1.86", 
     "RefundCommission": "-1.50", 
     "Principal": "-49.99"
   }, 
@@ -2630,9 +2642,19 @@
     "Principal": "-7.99"
   }, 
   "109-0987555-2150606": {
+    "Original_ShippingChargeback": "-3.99", 
+    "Original_ShippingTax": "0.40", 
+    "Original_Tax": "1.60", 
+    "Original_Principal": "-1.99", 
+    "Original_Shipping": "3.99", 
+    "Original_Commission": "-1.19", 
+    "Original_FBAPerUnitFulfillmentFee": "-1.06", 
+    "Original_FBAWeightBasedFee": "-0.50", 
+    "Original_FBAPerOrderFulfillmentFee": "-1.00", 
     "Commission": "4.95", 
-    "RefundCommission": "-0.99", 
     "Shipping": "2.99", 
+    "Original_SalesTaxServiceFee": "-0.05", 
+    "RefundCommission": "-0.99", 
     "Principal": "-32.99"
   }, 
   "002-7435385-1198651": {
@@ -2973,7 +2995,17 @@
     "Shipping": "-6.99"
   }, 
   "113-2768933-5223431": {
+    "Original_ShippingChargeback": "-6.25", 
+    "Original_SalesTaxServiceFee": "-0.10", 
+    "Original_Tax": "3.60", 
+    "Original_Principal": "31.00", 
+    "Original_Commission": "-4.66", 
+    "Original_ShippingTax": "1.00", 
+    "Original_FBAPerUnitFulfillmentFee": "-2.12", 
+    "Original_FBAPerOrderFulfillmentFee": "-1.00", 
     "Commission": "4.50", 
+    "Original_FBAWeightBasedFee": "-1.92", 
+    "Original_Shipping": "-1.50", 
     "RefundCommission": "-0.90", 
     "Principal": "-29.99"
   }, 

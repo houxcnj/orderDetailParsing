@@ -2,6 +2,7 @@ import json
 import os
 import sys
 
+# get the refund order's information.
 def getRefund(lines):
 	if not lines:
 		return None
@@ -16,6 +17,26 @@ def getRefund(lines):
 		else:
 			lineDict[l[13]] = l[14]
 	return refundDict
+
+def orderInfo(rfile, lines):
+	f = open(rfile, "r")
+	lines2 = f.readlines()
+	f.close()	
+
+	orderNo = []
+	for line in lines:
+		l = line.split("\t")
+		orderNo.append(l[7])
+
+	res = []
+	for order in set(orderNo):
+		for line in lines2:
+			thisLine = line.split("\t")
+			if order == thisLine[8] and "Order" in line:
+				
+				thisLine[13] = "Original_"+thisLine[13]
+				res.append("\t".join(thisLine))
+	return res
 
 
 def refundInfo(rfile):
@@ -45,8 +66,9 @@ def extractAll():
 	for file in os.listdir(refundDir):
 		if file.endswith(".txt"):
 			lines = refundInfo(refundDir+file)
+			lines += orderInfo(refundDir+file, lines)
 			if not lines:
-				continue
+				continue			
 			res.update(getRefund(lines))
 
 	return res
