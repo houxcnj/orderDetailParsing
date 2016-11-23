@@ -12,12 +12,12 @@ def getRefund(lines):
 		l = line.split("\t")
 		if not l[7] in refundDict:
 			# lineDict.clear()
-			lineDict = {l[13]:l[14]}
+			lineDict = {l[13]:float(l[14])}
 			refundDict[l[7]] = lineDict
 		else:
 			if l[13] in lineDict:
 				l[13] = l[13] + "2"
-			lineDict[l[13]] = l[14]
+			lineDict[l[13]] = float(l[14])
 				
 	return refundDict
 """
@@ -51,7 +51,7 @@ def getOriOd(lines, refundDict):
 		if l[7] in refundDict:
 			if l[13] in refundDict[l[7]]:
 				l[13] = l[13] + "2"
-			lineDict = {l[13]:l[14]}
+			lineDict = {l[13]:float(l[14])}
 			refundDict[l[7]].update(lineDict)
 			
 	return refundDict
