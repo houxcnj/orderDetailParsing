@@ -48,6 +48,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JScrollPane;
+import javax.swing.JFormattedTextField;
  
 
 public class OrderTool2 extends JFrame {
@@ -69,7 +70,7 @@ public class OrderTool2 extends JFrame {
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JTextField productField;
-	private JTextField refundField;
+	private JFormattedTextField refundField;
 	private final Action action = new SwingAction();
 	private final Action action_1 = new SwingAction_1();
 	private final Action action_2 = new SwingAction_2();
@@ -84,13 +85,21 @@ public class OrderTool2 extends JFrame {
 	private String purchaseDate;
 	private String sku;
 	private String asin;
-	private String refund;
+	private double refund;
 	private String product;
 	private String phone;
 	private String fulChannel;
 	private String channel;
 	private String email;
 	private String ssku;
+	private double oriPrice;
+	private double rfPrice;
+	private double shipping;
+	private double rfShipping;
+	private double promotion;
+	private double rfPromotion;
+	private double tax;
+	private double rfTax;
 	private JTextField dateField;
 	private final Action action_3 = new SwingAction_3();
 	private JTextField ticketNField;
@@ -111,6 +120,10 @@ public class OrderTool2 extends JFrame {
 	private String sellerId;
 	private JTextField crField;
 	private JTextField trackField;
+	private JFormattedTextField rfpField;
+	private JFormattedTextField rfsField;
+	private JFormattedTextField ppriceField;
+	private JFormattedTextField shippingField;
 	
 
 	/**
@@ -235,7 +248,6 @@ public class OrderTool2 extends JFrame {
 						ssku = mapSKU(sku);
 					
 					asin = doc1.getElementsByTagName("ASIN").item(0).getTextContent();
-					//refund = 
 					product = doc1.getElementsByTagName("Title").item(0).getTextContent();
 					
 					try {
@@ -262,7 +274,7 @@ public class OrderTool2 extends JFrame {
 					zip1Field.setText(zipcode1);
 					zip2Field.setText(zipcode2);
 					productField.setText(product);;
-					refundField.setText(refund);
+					
 					dateField.setText(purchaseDate);
 					phoneField.setText(phone);
 					ffField.setText(fulChannel);
@@ -270,12 +282,60 @@ public class OrderTool2 extends JFrame {
 					emailField.setText(email);
 					sskuField.setText(ssku);
 					
-					
-					// set the font color based on refund total
-//					if (refund.equals("$0.00"))
-//						refundField.setForeground(Color.GREEN);
-//					else
-//						refundField.setForeground(Color.RED);
+					// deal with the refund information
+					try {
+						FileReader reader = new FileReader("refund.json");
+						JSONObject jsonData = (JSONObject) new JSONParser().parse(reader);
+						JSONObject thisRefund = (JSONObject) jsonData.get(orderID);
+						oriPrice = 0;
+						if (thisRefund.get("Ori_Principal") != null) 
+							oriPrice = (double) thisRefund.get("Ori_Principal");
+						rfPrice = (double) thisRefund.get("Principal");
+						shipping = 0;
+						if (thisRefund.get("Ori_Shipping") != null) {
+							shipping = (double) thisRefund.get("Ori_Shipping");
+						}
+						rfShipping = 0;
+						if (thisRefund.get("Shipping") != null) {
+							rfShipping = (double) thisRefund.get("Shipping");
+						}
+						else if (thisRefund.get("Ori_Shipping2") != null) {
+							rfShipping = (double) thisRefund.get("Ori_Shipping2");
+						}
+						promotion = 0;
+						if (thisRefund.get("Ori_Principal2") != null)
+							promotion = (double) thisRefund.get("Ori_Principal2");
+						rfPromotion = 0;
+						if (thisRefund.get("Principal2") != null)
+							rfPromotion = (double) thisRefund.get("Principal2");
+						tax = 0;
+						if (thisRefund.get("Ori_Tax") != null)
+								tax = (double) thisRefund.get("Ori_Tax");
+						rfTax = 0;
+						if (thisRefund.get("Tax") != null)
+							rfTax = (double) thisRefund.get("Tax");
+						rfpField.setValue(rfPrice);
+						rfsField.setValue(rfShipping);
+						ppriceField.setValue(oriPrice);
+						shippingField.setValue(shipping);
+						refund = oriPrice + rfPrice + shipping + rfShipping + promotion +rfPromotion + tax + rfTax;
+						refundField.setValue(refund);
+						// set the font color based on refund total
+						if (refund <= 0) {
+							refundField.setForeground(Color.GREEN);
+							if (refund < 0)
+								logArea.append(LocalDateTime.now().toString() + ": Please see refund detail on website!\n");
+						}
+						else
+							refundField.setForeground(Color.RED);
+						
+						reader.close();
+						}
+						catch (Exception e4) {
+							System.out.println(e4.getMessage());
+							logArea.append(LocalDateTime.now().toString() + ": No Refund Information!\n");
+						}
+
 					
 					logArea.append(LocalDateTime.now().toString() + ": Process Done!\n");
 		        	
@@ -633,21 +693,7 @@ public class OrderTool2 extends JFrame {
 		lblRefundTotal.setBounds(362, 416, 74, 14);
 		contentPane.add(lblRefundTotal);
 		
-		refundField = new JTextField();
-		// refundField.setForeground(Color.GREEN);
-		refundField.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (e.getClickCount() == 2) {
-					refundField.selectAll();
-					String sltext = refundField.getSelectedText();
-					StringSelection data = new StringSelection(sltext);
-					Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-					clipboard.setContents(data, data);
-					logArea.append(LocalDateTime.now().toString() + ": Total refund has been copied to clipboard.\n");
-				}
-			}
-		});
+		refundField = new JFormattedTextField();
 		refundField.setColumns(10);
 		refundField.setBounds(462, 410, 270, 20);
 		contentPane.add(refundField);
@@ -825,7 +871,7 @@ public class OrderTool2 extends JFrame {
 			}
 		});
 		crField.setColumns(10);
-		crField.setBounds(123, 410, 202, 20);
+		crField.setBounds(123, 410, 74, 20);
 		contentPane.add(crField);
 		
 		JLabel lblTracking = new JLabel("Tracking #");
@@ -849,6 +895,67 @@ public class OrderTool2 extends JFrame {
 		trackField.setColumns(10);
 		trackField.setBounds(123, 438, 202, 20);
 		contentPane.add(trackField);
+		
+		JLabel lblRefundPrincple = new JLabel("Refund Principal");
+		lblRefundPrincple.setBounds(558, 447, 103, 14);
+		contentPane.add(lblRefundPrincple);
+		
+		rfpField = new JFormattedTextField();
+		rfpField.setColumns(10);
+		rfpField.setBounds(658, 441, 74, 20);
+		contentPane.add(rfpField);
+		
+		JLabel lblRefundShipping = new JLabel("Refund Shipping");
+		lblRefundShipping.setBounds(558, 478, 103, 14);
+		contentPane.add(lblRefundShipping);
+		
+		rfsField = new JFormattedTextField();
+		rfsField.setColumns(10);
+		rfsField.setBounds(658, 472, 74, 20);
+		contentPane.add(rfsField);
+		
+		JLabel lblPrincipalPrice = new JLabel("Principal Price");
+		lblPrincipalPrice.setBounds(362, 447, 103, 14);
+		contentPane.add(lblPrincipalPrice);
+		
+		ppriceField = new JFormattedTextField();
+		ppriceField.setColumns(10);
+		ppriceField.setBounds(462, 441, 74, 20);
+		contentPane.add(ppriceField);
+		
+		JLabel lblShipping = new JLabel("Shipping");
+		lblShipping.setBounds(362, 478, 103, 14);
+		contentPane.add(lblShipping);
+		
+		shippingField = new JFormattedTextField();
+		shippingField.setColumns(10);
+		shippingField.setBounds(462, 472, 74, 20);
+		contentPane.add(shippingField);
+		
+		JLabel lblPromotion = new JLabel("Promotion");
+		lblPromotion.setBounds(362, 509, 103, 14);
+		contentPane.add(lblPromotion);
+		
+		JFormattedTextField promoTextField = new JFormattedTextField();
+		promoTextField.setColumns(10);
+		promoTextField.setBounds(462, 503, 74, 20);
+		contentPane.add(promoTextField);
+		
+		JLabel lblRefundPromotion = new JLabel("Refund Promotion");
+		lblRefundPromotion.setBounds(558, 509, 103, 14);
+		contentPane.add(lblRefundPromotion);
+		
+		JFormattedTextField rPromoTextField = new JFormattedTextField();
+		rPromoTextField.setColumns(10);
+		rPromoTextField.setBounds(658, 503, 74, 20);
+		contentPane.add(rPromoTextField);
+		
+		String url = "";
+		String ll = "Tracking Info";
+		//Html trackinglink = new Html("<a target=\"_blank\" href=\"" + url + "\">" + ll + "</a>");
+		JLabel lblTrackingInfo = new JLabel(ll);
+		lblTrackingInfo.setBounds(217, 413, 108, 14);
+		contentPane.add(lblTrackingInfo);
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -1014,8 +1121,16 @@ public class OrderTool2 extends JFrame {
 					zd.updateTicket(ticket_bak);
 				*/
 				//System.out.println(ticket_bak.getCustomFields().get(0).getValue());
-				zd.updateTicket(ticket_bak);
-				String mm = ": ticket " + ticket_bak.getId() + "has been restored.\n";
+				String str = ticketNField.getText();
+				int ticketID = Integer.parseInt(str);
+				String mm = "";
+				if (ticket_bak.getId() == ticketID) {
+					zd.updateTicket(ticket_bak);
+				    mm = ": ticket " + ticket_bak.getId() + " has been restored.\n";
+				}
+				else {
+					mm = "You cannot restore this ticket.\n";
+				}
 				logArea.append(LocalDateTime.now().toString() + mm);
 				zd.close();
 			}
@@ -1241,5 +1356,4 @@ public class OrderTool2 extends JFrame {
         
         return result;
     }
-
 }
