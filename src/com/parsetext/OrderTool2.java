@@ -1,5 +1,7 @@
 package com.parsetext;
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.security.MessageDigest;
 import java.time.LocalDateTime;
 
@@ -45,6 +47,7 @@ import com.amazonservices.mws.orders._2013_09_01.model.ListOrderItemsResponse;
 import com.amazonservices.mws.orders._2013_09_01.model.ResponseHeaderMetadata;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JScrollPane;
@@ -124,7 +127,8 @@ public class OrderTool2 extends JFrame {
 	private JFormattedTextField rfsField;
 	private JFormattedTextField ppriceField;
 	private JFormattedTextField shippingField;
-	
+
+	private URI uri;
 
 	/**
 	 * Launch the application.
@@ -145,8 +149,9 @@ public class OrderTool2 extends JFrame {
 	*/
 	/**
 	 * Create the frame.
+	 * @throws URISyntaxException 
 	 */
-	public OrderTool2() {
+	public OrderTool2() throws URISyntaxException {
 		
 		System.out.println(sellerId);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -257,10 +262,35 @@ public class OrderTool2 extends JFrame {
 					crField.setText((String) jArray.toArray()[0]);
 					trackField.setText((String) jArray.toArray()[1]);
 					reader.close();
+					
+					String carrier = crField.getText();
+					String trackingNumber = trackField.getText();
+					if (carrier.equals("UPS") || carrier.equals("SUREPOST")) {
+						uri = new URI("http://wwwapps.ups.com/WebTracking/track?track=yes&trackNums=" + trackingNumber);
+					}
+					else if (carrier.equals("USPS")) {
+						uri = new URI("https://tools.usps.com/go/TrackConfirmAction?tLabels=" + trackingNumber);
+					}
+					else if (carrier.equals("FEDEX")) {
+						uri = new URI("https://www.fedex.com/apps/fedextrack/?tracknumbers=" + trackingNumber);
+					}
+					else if (carrier.equals("LASERSHIP")) {
+						uri = new URI("http://www.lasership.com/track/" + trackingNumber);
+					}
+					else if (carrier.equals("ONTRAC")) {
+						uri = new URI("http://www.ontrac.com/trackingres.asp?tracking_number=" + trackingNumber);
+					}
+					else if (carrier.equals("DHL")) {
+						uri = new URI("http://www.dhl.com/en/express/tracking.html?AWB=" + trackingNumber + "5&brand=DHL");
+					}
+					else {
+						uri = new URI("http://www.myunu.com");
+					}
 					}
 					catch (Exception e4) {
 						System.out.println(e4.getMessage());
 						logArea.append(LocalDateTime.now().toString() + ": No Tracking Information!\n");
+						uri = new URI("http://www.myunu.com");
 					}
 					// fill value to the appropriate field 
 					orderField.setText(orderID);
@@ -950,13 +980,37 @@ public class OrderTool2 extends JFrame {
 		rPromoTextField.setBounds(658, 503, 74, 20);
 		contentPane.add(rPromoTextField);
 		
-		String url = "";
-		String ll = "Tracking Info";
-		//Html trackinglink = new Html("<a target=\"_blank\" href=\"" + url + "\">" + ll + "</a>");
-		JLabel lblTrackingInfo = new JLabel(ll);
-		lblTrackingInfo.setBounds(217, 413, 108, 14);
-		contentPane.add(lblTrackingInfo);
+		
+		// uri = new URI("http://www.myunu.com");
+		
+		class OpenUrlAction implements ActionListener {
+			@Override 
+			public void actionPerformed(ActionEvent e) {
+				open(uri);
+			}
+		}
+		
+		JButton btnTrackingInfo = new JButton("Tracking Info");
+		btnTrackingInfo.setBounds(207, 407, 118, 23);
+		btnTrackingInfo.addActionListener(new OpenUrlAction());
+		contentPane.add(btnTrackingInfo);
+		
+		
+		
 	}
+	
+	private static void open(URI uri) {
+		if (Desktop.isDesktopSupported()) {
+			try {
+				Desktop.getDesktop().browse(uri);
+			} catch (IOException e) {
+				System.out.println(e);
+			}
+		}
+		else {}
+	}
+	
+	
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "Populate");
