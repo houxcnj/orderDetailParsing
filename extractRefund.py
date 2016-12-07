@@ -20,27 +20,8 @@ def getRefund(lines):
 			lineDict[l[13]] = float(l[14])
 				
 	return refundDict
-"""
-def orderInfo(rfile, lines):
-	f = open(rfile, "r")
-	lines2 = f.readlines()
-	f.close()	
 
-	orderNo = []
-	for line in lines:
-		l = line.split("\t")
-		# print l[7], l[8]
-		orderNo.append(l[7])
-
-	res = []
-	lines2[:] = [x for x in lines2 if "Order" in x]
-	for order in set(orderNo):
-		print order
-		for line in lines2:
-			if order in line:
-				res.append(line)
-	return res
-"""
+# based on refund order to find the original order info
 def getOriOd(lines, refundDict):
 	if not lines:
 		return None
@@ -56,7 +37,7 @@ def getOriOd(lines, refundDict):
 			
 	return refundDict
 
-
+# 
 def orderInfo(rfile, refundDict):
 	f = open(rfile, "r")
 	lines = f.readlines()
